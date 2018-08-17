@@ -1,0 +1,681 @@
+(dp1
+S'output'
+p2
+S"<type 'exceptions.TypeError'> tuple indices must be integers, not str"
+p3
+sS'layer'
+p4
+S'/home/cc5985/web2py/web2py/applications/app1/controllers/api.py'
+p5
+sS'code'
+p6
+S'<code object <module> at 0x7fdbc4f31ab0, file "/home/cc5985/web2py/web2py/applications/app1/controllers/api.py", line 1>'
+p7
+sS'snapshot'
+p8
+(dp9
+S'exception'
+p10
+(dp11
+S'__getslice__'
+p12
+S"<method-wrapper '__getslice__' of exceptions.TypeError object>"
+p13
+sS'__str__'
+p14
+S"<method-wrapper '__str__' of exceptions.TypeError object>"
+p15
+sS'__reduce__'
+p16
+S'<built-in method __reduce__ of exceptions.TypeError object>'
+p17
+sS'__dict__'
+p18
+S'{}'
+p19
+sS'message'
+p20
+S"'tuple indices must be integers, not str'"
+p21
+sS'__sizeof__'
+p22
+S'<built-in method __sizeof__ of exceptions.TypeError object>'
+p23
+sS'__init__'
+p24
+S"<method-wrapper '__init__' of exceptions.TypeError object>"
+p25
+sS'__setattr__'
+p26
+S"<method-wrapper '__setattr__' of exceptions.TypeError object>"
+p27
+sS'__reduce_ex__'
+p28
+S'<built-in method __reduce_ex__ of exceptions.TypeError object>'
+p29
+sS'__new__'
+p30
+S'<built-in method __new__ of type object>'
+p31
+sS'__format__'
+p32
+S'<built-in method __format__ of exceptions.TypeError object>'
+p33
+sS'__class__'
+p34
+S"<type 'exceptions.TypeError'>"
+p35
+sS'__doc__'
+p36
+S"'Inappropriate argument type.'"
+p37
+sS'__getitem__'
+p38
+S"<method-wrapper '__getitem__' of exceptions.TypeError object>"
+p39
+sS'__setstate__'
+p40
+S'<built-in method __setstate__ of exceptions.TypeError object>'
+p41
+sS'__getattribute__'
+p42
+S"<method-wrapper '__getattribute__' of exceptions.TypeError object>"
+p43
+sS'args'
+p44
+S"('tuple indices must be integers, not str',)"
+p45
+sS'__subclasshook__'
+p46
+S'<built-in method __subclasshook__ of type object>'
+p47
+sS'__unicode__'
+p48
+S'<built-in method __unicode__ of exceptions.TypeError object>'
+p49
+sS'__delattr__'
+p50
+S"<method-wrapper '__delattr__' of exceptions.TypeError object>"
+p51
+sS'__repr__'
+p52
+S"<method-wrapper '__repr__' of exceptions.TypeError object>"
+p53
+sS'__hash__'
+p54
+S"<method-wrapper '__hash__' of exceptions.TypeError object>"
+p55
+ssS'evalue'
+p56
+S'tuple indices must be integers, not str'
+p57
+sS'request'
+p58
+cgluon.html
+XML_unpickle
+p59
+(S's\xb4v\x00\x00<div><table><tr><td style="font-weight:bold;vertical-align:top;">ajax</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">application</td><td style="vertical-align:top;">:</td><td><div>app1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">args</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>run</div></td></tr><tr><td><div>transactions</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cid</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">client</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">controller</td><td style="vertical-align:top;">:</td><td><div>api</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cookies</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">PGADMIN_LANGUAGE</td><td style="vertical-align:top;">:</td><td><div>en<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">adminLanguage</td><td style="vertical-align:top;">:</td><td><div>zh<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">pga4_session</td><td style="vertical-align:top;">:</td><td><div>b17f8d6f-4f60-4c35-97a8-4231024d8610!NMc2rNqZ3v24RlWDyZ08z0LZ+iY=<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_admin</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-5e71cd66-3b7d-4c65-adc7-8ed76961285c<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_app1</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-5c1ed551-d0e0-4382-9b01-bf4efc48a769<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_hello</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-c670ab94-0430-4259-ad19-307c971103d5<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_images</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-96a1c6e9-4f42-40bf-8e2a-56582904dcad<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_welcome</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-a2d17cbf-7782-4534-9632-440cabc5e777<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">env</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">HTTP_ACCEPT</td><td style="vertical-align:top;">:</td><td><div>text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_ACCEPT_ENCODING</td><td style="vertical-align:top;">:</td><td><div>gzip, deflate, br</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_ACCEPT_LANGUAGE</td><td style="vertical-align:top;">:</td><td><div>en-US,en;q=0.9</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_CACHE_CONTROL</td><td style="vertical-align:top;">:</td><td><div>max-age=0</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_CONNECTION</td><td style="vertical-align:top;">:</td><td><div>keep-alive</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_COOKIE</td><td style="vertical-align:top;">:</td><td><div>session_id_admin=127.0.0.1-5e71cd66-3b7d-4c65-adc7-8ed76961285c; adminLanguage=zh; session_id_hello=127.0.0.1-c670ab94-0430-4259-ad19-307c971103d5; session_id_images=127.0.0.1-96a1c6e9-4f42-40bf-8e2a-56582904dcad; session_id_welcome=127.0.0.1-a2d17cbf-7782-4534-9632-440cabc5e777; pga4_session=b17f8d6f-4f60-4c35-97a8-4231024d8610!NMc2rNqZ3v24RlWDyZ08z0LZ+iY=; PGADMIN_LANGUAGE=en; session_id_app1=127.0.0.1-5c1ed551-d0e0-4382-9b01-bf4efc48a769</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_HOST</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1:8000</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_UPGRADE_INSECURE_REQUESTS</td><td style="vertical-align:top;">:</td><td><div>1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_USER_AGENT</td><td style="vertical-align:top;">:</td><td><div>Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">PATH_INFO</td><td style="vertical-align:top;">:</td><td><div>/app1/api/call/run/transactions</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">QUERY_STRING</td><td style="vertical-align:top;">:</td><td><div>id=GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">REMOTE_ADDR</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">REMOTE_PORT</td><td style="vertical-align:top;">:</td><td><div>43866</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">REQUEST_METHOD</td><td style="vertical-align:top;">:</td><td><div>GET</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SCRIPT_NAME</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_NAME</td><td style="vertical-align:top;">:</td><td><div>ubuntu</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_PORT</td><td style="vertical-align:top;">:</td><td><div>8000</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_PROTOCOL</td><td style="vertical-align:top;">:</td><td><div>HTTP/1.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_SOFTWARE</td><td style="vertical-align:top;">:</td><td><div>Rocket 1.2.6</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">app_folders</td><td style="vertical-align:top;">:</td><td><div>set([&#x27;/home/cc5985/web2py/web2py/applications/welcome/&#x27;, &#x27;/home/cc5985/web2py/web2py/applications/app1/&#x27;, &#x27;/home/cc5985/web2py/web2py/applications/admin/&#x27;])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">applications_parent</td><td style="vertical-align:top;">:</td><td><div>/home/cc5985/web2py/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cmd_args</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cmd_options</td><td style="vertical-align:top;">:</td><td><div>&lt;Values at 0x7fdbe9986f38: {&#x27;verbose&#x27;: False, &#x27;ip&#x27;: &#x27;127.0.0.1&#x27;, &#x27;debuglevel&#x27;: 30, &#x27;with_scheduler&#x27;: False, &#x27;shutdown_timeout&#x27;: 5, &#x27;taskbar&#x27;: False, &#x27;with_coverage&#x27;: False, &#x27;pid_filename&#x27;: &#x27;httpserver.pid&#x27;, &#x27;maxthreads&#x27;: None, &#x27;softcron&#x27;: False, &#x27;server_name&#x27;: &#x27;ubuntu&#x27;, &#x27;bpython&#x27;: False, &#x27;nogui&#x27;: False, &#x27;port&#x27;: 8000, &#x27;print_errors&#x27;: False, &#x27;extcron&#x27;: False, &#x27;runcron&#x27;: False, &#x27;run_system_tests&#x27;: False, &#x27;test&#x27;: None, &#x27;folder&#x27;: &#x27;/home/cc5985/web2py/web2py&#x27;, &#x27;config&#x27;: &#x27;&#x27;, &#x27;minthreads&#x27;: None, &#x27;shell&#x27;: None, &#x27;run&#x27;: &#x27;&#x27;, &#x27;log_filename&#x27;: &#x27;httpserver.log&#x27;, &#x27;profiler_dir&#x27;: None, &#x27;args&#x27;: [&#x27;&#x27;], &#x27;socket_timeout&#x27;: 5, &#x27;ssl_ca_certificate&#x27;: None, &#x27;scheduler&#x27;: None, &#x27;interfaces&#x27;: None, &#x27;ssl_private_key&#x27;: &#x27;&#x27;, &#x27;gae&#x27;: None, &#x27;password&#x27;: &#x27;******&#x27;, &#x27;request_queue_size&#x27;: 5, &#x27;ssl_certificate&#x27;: &#x27;&#x27;, &#x27;cronjob&#x27;: False, &#x27;numthreads&#x27;: None, &#x27;quiet&#x27;: False, &#x27;import_models&#x27;: False, &#x27;timeout&#x27;: 10, &#x27;plain&#x27;: False, &#x27;nobanner&#x27;: False}&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">db_sessions</td><td style="vertical-align:top;">:</td><td><div>set([])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">debugging</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">gluon_parent</td><td style="vertical-align:top;">:</td><td><div>/home/cc5985/web2py/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_accept</td><td style="vertical-align:top;">:</td><td><div>text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_accept_encoding</td><td style="vertical-align:top;">:</td><td><div>gzip, deflate, br</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_accept_language</td><td style="vertical-align:top;">:</td><td><div>en-US,en;q=0.9</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_cache_control</td><td style="vertical-align:top;">:</td><td><div>max-age=0</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_connection</td><td style="vertical-align:top;">:</td><td><div>keep-alive</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_cookie</td><td style="vertical-align:top;">:</td><td><div>session_id_admin=127.0.0.1-5e71cd66-3b7d-4c65-adc7-8ed76961285c; adminLanguage=zh; session_id_hello=127.0.0.1-c670ab94-0430-4259-ad19-307c971103d5; session_id_images=127.0.0.1-96a1c6e9-4f42-40bf-8e2a-56582904dcad; session_id_welcome=127.0.0.1-a2d17cbf-7782-4534-9632-440cabc5e777; pga4_session=b17f8d6f-4f60-4c35-97a8-4231024d8610!NMc2rNqZ3v24RlWDyZ08z0LZ+iY=; PGADMIN_LANGUAGE=en; session_id_app1=127.0.0.1-5c1ed551-d0e0-4382-9b01-bf4efc48a769</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_host</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1:8000</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_upgrade_insecure_requests</td><td style="vertical-align:top;">:</td><td><div>1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_user_agent</td><td style="vertical-align:top;">:</td><td><div>Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_jython</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_py2</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_pypy</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_source</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">local_hosts</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>::1</div></td></tr><tr><td><div>127.0.1.1</div></td></tr><tr><td><div>::ffff:127.0.0.1</div></td></tr><tr><td><div>127.0.0.1</div></td></tr><tr><td><div>ubuntu</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path_info</td><td style="vertical-align:top;">:</td><td><div>/app1/api/call/run/transactions</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">query_string</td><td style="vertical-align:top;">:</td><td><div>id=GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">remote_addr</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">remote_port</td><td style="vertical-align:top;">:</td><td><div>43866</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">request_method</td><td style="vertical-align:top;">:</td><td><div>GET</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">request_uri</td><td style="vertical-align:top;">:</td><td><div>/app1/api/call/run/transactions?id=GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">script_name</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_name</td><td style="vertical-align:top;">:</td><td><div>ubuntu</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_port</td><td style="vertical-align:top;">:</td><td><div>8000</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_protocol</td><td style="vertical-align:top;">:</td><td><div>HTTP/1.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_software</td><td style="vertical-align:top;">:</td><td><div>Rocket 1.2.6</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">web2py_path</td><td style="vertical-align:top;">:</td><td><div>/home/cc5985/web2py/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">web2py_version</td><td style="vertical-align:top;">:</td><td><div>2.16.1-stable+timestamp.2017.11.14.05.54.25</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.errors</td><td style="vertical-align:top;">:</td><td><div>&lt;open file &#x27;&lt;stderr&gt;&#x27;, mode &#x27;w&#x27; at 0x7fdc006611e0&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.file_wrapper</td><td style="vertical-align:top;">:</td><td><div>&lt;class wsgiref.util.FileWrapper at 0x7fdbe999dd50&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.input</td><td style="vertical-align:top;">:</td><td><div>&lt;socket._fileobject object at 0x7fdbc4f31dd0&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.multiprocess</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.multithread</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.run_once</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.url_scheme</td><td style="vertical-align:top;">:</td><td><div>http</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.version</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>1</div></td></tr><tr><td><div>0</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_errors</td><td style="vertical-align:top;">:</td><td><div>&lt;open file &#x27;&lt;stderr&gt;&#x27;, mode &#x27;w&#x27; at 0x7fdc006611e0&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_file_wrapper</td><td style="vertical-align:top;">:</td><td><div>&lt;class wsgiref.util.FileWrapper at 0x7fdbe999dd50&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_input</td><td style="vertical-align:top;">:</td><td><div>&lt;socket._fileobject object at 0x7fdbc4f31dd0&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_multiprocess</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_multithread</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_run_once</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_url_scheme</td><td style="vertical-align:top;">:</td><td><div>http</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_version</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>1</div></td></tr><tr><td><div>0</div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">extension</td><td style="vertical-align:top;">:</td><td><div>html</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">folder</td><td style="vertical-align:top;">:</td><td><div>/home/cc5985/web2py/web2py/applications/app1/</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">function</td><td style="vertical-align:top;">:</td><td><div>call</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">global_settings</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">app_folders</td><td style="vertical-align:top;">:</td><td><div>set([&#x27;/home/cc5985/web2py/web2py/applications/welcome/&#x27;, &#x27;/home/cc5985/web2py/web2py/applications/app1/&#x27;, &#x27;/home/cc5985/web2py/web2py/applications/admin/&#x27;])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">applications_parent</td><td style="vertical-align:top;">:</td><td><div>/home/cc5985/web2py/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cmd_args</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cmd_options</td><td style="vertical-align:top;">:</td><td><div>&lt;Values at 0x7fdbe9986f38: {&#x27;verbose&#x27;: False, &#x27;ip&#x27;: &#x27;127.0.0.1&#x27;, &#x27;debuglevel&#x27;: 30, &#x27;with_scheduler&#x27;: False, &#x27;shutdown_timeout&#x27;: 5, &#x27;taskbar&#x27;: False, &#x27;with_coverage&#x27;: False, &#x27;pid_filename&#x27;: &#x27;httpserver.pid&#x27;, &#x27;maxthreads&#x27;: None, &#x27;softcron&#x27;: False, &#x27;server_name&#x27;: &#x27;ubuntu&#x27;, &#x27;bpython&#x27;: False, &#x27;nogui&#x27;: False, &#x27;port&#x27;: 8000, &#x27;print_errors&#x27;: False, &#x27;extcron&#x27;: False, &#x27;runcron&#x27;: False, &#x27;run_system_tests&#x27;: False, &#x27;test&#x27;: None, &#x27;folder&#x27;: &#x27;/home/cc5985/web2py/web2py&#x27;, &#x27;config&#x27;: &#x27;&#x27;, &#x27;minthreads&#x27;: None, &#x27;shell&#x27;: None, &#x27;run&#x27;: &#x27;&#x27;, &#x27;log_filename&#x27;: &#x27;httpserver.log&#x27;, &#x27;profiler_dir&#x27;: None, &#x27;args&#x27;: [&#x27;&#x27;], &#x27;socket_timeout&#x27;: 5, &#x27;ssl_ca_certificate&#x27;: None, &#x27;scheduler&#x27;: None, &#x27;interfaces&#x27;: None, &#x27;ssl_private_key&#x27;: &#x27;&#x27;, &#x27;gae&#x27;: None, &#x27;password&#x27;: &#x27;******&#x27;, &#x27;request_queue_size&#x27;: 5, &#x27;ssl_certificate&#x27;: &#x27;&#x27;, &#x27;cronjob&#x27;: False, &#x27;numthreads&#x27;: None, &#x27;quiet&#x27;: False, &#x27;import_models&#x27;: False, &#x27;timeout&#x27;: 10, &#x27;plain&#x27;: False, &#x27;nobanner&#x27;: False}&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">db_sessions</td><td style="vertical-align:top;">:</td><td><div>set([])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">debugging</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">gluon_parent</td><td style="vertical-align:top;">:</td><td><div>/home/cc5985/web2py/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_jython</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_py2</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_pypy</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_source</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">local_hosts</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>::1</div></td></tr><tr><td><div>127.0.1.1</div></td></tr><tr><td><div>::ffff:127.0.0.1</div></td></tr><tr><td><div>127.0.0.1</div></td></tr><tr><td><div>ubuntu</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">web2py_version</td><td style="vertical-align:top;">:</td><td><div>2.16.1-stable+timestamp.2017.11.14.05.54.25</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_https</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_local</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_restful</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_scheduler</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_shell</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">now</td><td style="vertical-align:top;">:</td><td><div>datetime.datetime(2018, 8, 13, 14, 58, 42, 446989)</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">raw_args</td><td style="vertical-align:top;">:</td><td><div>run/transactions</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">raw_extension</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">url</td><td style="vertical-align:top;">:</td><td><div>/app1/api/call/run/transactions</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">utcnow</td><td style="vertical-align:top;">:</td><td><div>datetime.datetime(2018, 8, 13, 6, 58, 42, 447011)</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi</td><td style="vertical-align:top;">:</td><td><div>&lt;gluon.main.LazyWSGI object at 0x7fdbc42cf050&gt;</div></td></tr></table></div>'
+tRp60
+sS'frames'
+p61
+(lp62
+(dp63
+S'file'
+p64
+S'/home/cc5985/web2py/web2py/gluon/restricted.py'
+p65
+sS'dump'
+p66
+(dp67
+S'environment'
+p68
+S"{'A': <class 'gluon.html.A'>, 'ANY_OF': <class 'gluon.validators.ANY_OF'>, 'ASSIGNJS': <function ASSIGNJS>, 'AppConfig': <function AppConfig>, 'Auth': <class 'gluon.tools.Auth'>, 'B': <class 'gluon.html.B'>, 'BASE_URL': 'http://localhost:8888', 'BEAUTIFY': <class 'gluon.html.BEAUTIFY'>, 'BODY': <class 'gluon.html.BODY'>, 'BR': <class 'gluon.html.BR'>, ...}"
+p69
+sS'ccode'
+p70
+S'<code object <module> at 0x7fdbc4f31ab0, file "/...py/applications/app1/controllers/api.py", line 1>'
+p71
+ssS'lnum'
+p72
+I219
+sS'lines'
+p73
+(dp74
+I214
+S'    if environment is None:'
+p75
+sI215
+S'        environment = {}'
+p76
+sI216
+S"    environment['__file__'] = layer"
+p77
+sI217
+S"    environment['__name__'] = '__restricted__'"
+p78
+sI218
+S'    try:'
+p79
+sI219
+S'        exec(ccode, environment)'
+p80
+sI220
+S'    except HTTP:'
+p81
+sI221
+S'        raise'
+p82
+sI222
+S'    except RestrictedError:'
+p83
+sI223
+S'        # do not encapsulate (obfuscate) the original RestrictedError'
+p84
+ssS'call'
+p85
+S'(ccode=<code object <module> at 0x7fdbc4f31ab0, file "/...py/applications/app1/controllers/api.py", line 1>, environment={\'A\': <class \'gluon.html.A\'>, \'ANY_OF\': <class \'gluon.validators.ANY_OF\'>, \'ASSIGNJS\': <function ASSIGNJS>, \'AppConfig\': <function AppConfig>, \'Auth\': <class \'gluon.tools.Auth\'>, \'B\': <class \'gluon.html.B\'>, \'BASE_URL\': \'http://localhost:8888\', \'BEAUTIFY\': <class \'gluon.html.BEAUTIFY\'>, \'BODY\': <class \'gluon.html.BODY\'>, \'BR\': <class \'gluon.html.BR\'>, ...}, layer=\'/home/cc5985/web2py/web2py/applications/app1/controllers/api.py\', scode=<code object <module> at 0x7fdbc4f31ab0, file "/...py/applications/app1/controllers/api.py", line 1>)'
+p86
+sS'func'
+p87
+S'restricted'
+p88
+sa(dp89
+g64
+S'/home/cc5985/web2py/web2py/applications/app1/controllers/api.py'
+p90
+sg66
+(dp91
+sg72
+I231
+sg73
+(dp92
+I224
+S"    my_psycopg=PsycoPG('horizon_testnet','cc5985','caichong','localhost','5432')"
+p93
+sI225
+S'    # select * from history_transactions where created_at not in (select created_at from history_transactions order by created_at limit 100) order by created_at limit 50'
+p94
+sI226
+S"    rows=my_psycopg.select('select * from history_transactions where created_at not in (select created_at from history_transactions order by created_at limit ' + one_page_limit*(page-1) + ') order by created_at limit ' + one_page_limit)"
+p95
+sI227
+S'    a=1'
+p96
+sI228
+S''
+sI229
+S''
+sI220
+S"    '''"
+p97
+sI221
+S'    if limit*page > total_limit and total_limit!=0:'
+p98
+sI222
+S'        return []'
+p99
+sI223
+S'    from pg_test import PsycoPG'
+p100
+ssg85
+S'()'
+p101
+sg87
+S'<module>'
+p102
+sa(dp103
+g64
+S'/home/cc5985/web2py/web2py/gluon/globals.py'
+p104
+sg66
+(dp105
+S'self'
+p106
+S'undefined'
+p107
+sS'f'
+S'<function call>'
+p108
+ssg72
+I420
+sg73
+(dp109
+I416
+S'        self.meta = Storage()      # used by web2py_ajax.html'
+p110
+sI417
+S'        self.menu = []             # used by the default view layout'
+p111
+sI418
+S'        self.files = []            # used by web2py_ajax.html'
+p112
+sI419
+S'        self._vars = None'
+p113
+sI420
+S'        self._caller = lambda f: f()'
+p114
+sI421
+S'        self._view_environment = None'
+p115
+sI422
+S'        self._custom_commit = None'
+p116
+sI423
+S'        self._custom_rollback = None'
+p117
+sI424
+S"        self.generic_patterns = ['*']"
+p118
+sI415
+S"        self.flash = ''            # used by the default view layout"
+p119
+ssg85
+S'(f=<function call>)'
+p120
+sg87
+S'<lambda>'
+p121
+sa(dp122
+g64
+S'/home/cc5985/web2py/web2py/applications/app1/controllers/api.py'
+p123
+sg66
+(dp124
+S'global service'
+p125
+S'<gluon.tools.Service object>'
+p126
+ssg72
+I14
+sg73
+(dp127
+I9
+S'service = Service()'
+p128
+sI10
+S''
+sI11
+S''
+sI12
+S'def call():'
+p129
+sI13
+S'    session.forget()'
+p130
+sI14
+S'    return service()'
+p131
+sI15
+S''
+sI16
+S''
+sI17
+S'@service.run'
+p132
+sI18
+S'def add(x,y):'
+p133
+ssg85
+S'()'
+p134
+sg87
+g85
+sa(dp135
+g64
+S'/home/cc5985/web2py/web2py/gluon/tools.py'
+p136
+sg66
+(dp137
+S'request.args'
+p138
+S"['run', 'transactions']"
+p139
+sS'self.serve_run'
+p140
+S'<bound method Service.serve_run of <gluon.tools.Service object>>'
+p141
+sS'self'
+p142
+S'<gluon.tools.Service object>'
+p143
+sS'request'
+p144
+S"<Storage {'_vars': <Storage {'id': 'GDJHGNGELXCN...'/home/cc5985/web2py/web2py/applications/app1/'}>"
+p145
+ssg72
+I5473
+sg73
+(dp146
+I5472
+S"        if arg0 == 'run':"
+p147
+sI5473
+S'            return self.serve_run(request.args[1:])'
+p148
+sI5474
+S"        elif arg0 == 'rss':"
+p149
+sI5475
+S'            return self.serve_rss(request.args[1:])'
+p150
+sI5476
+S"        elif arg0 == 'csv':"
+p151
+sI5477
+S'            return self.serve_csv(request.args[1:])'
+p152
+sI5468
+S'        request = current.request'
+p153
+sI5469
+S'        if len(request.args) < 1:'
+p154
+sI5470
+S'            raise HTTP(404, "Not Found")'
+p155
+sI5471
+S'        arg0 = request.args(0)'
+p156
+ssg85
+S'(self=<gluon.tools.Service object>)'
+p157
+sg87
+S'__call__'
+p158
+sa(dp159
+g64
+S'/home/cc5985/web2py/web2py/gluon/tools.py'
+p160
+sg66
+(dp161
+S'request.vars'
+p162
+S"<Storage {'id': 'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5'}>"
+p163
+sS'args'
+p164
+S"['transactions']"
+p165
+sS'request'
+p166
+S"<Storage {'_vars': <Storage {'id': 'GDJHGNGELXCN...'/home/cc5985/web2py/web2py/applications/app1/'}>"
+p167
+sS'builtindict'
+p168
+S"<type 'dict'>"
+p169
+ssg72
+I5090
+sg73
+(dp170
+I5088
+S'        if args and args[0] in self.run_procedures:'
+p171
+sI5089
+S'            return str(self.call_service_function(self.run_procedures[args[0]],'
+p172
+sI5090
+S'                                                  *args[1:], **dict(request.vars)))'
+p173
+sI5091
+S'        self.error()'
+p174
+sI5092
+S''
+sI5093
+S'    def serve_csv(self, args=None):'
+p175
+sI5094
+S'        request = current.request'
+p176
+sI5085
+S'        request = current.request'
+p177
+sI5086
+S'        if not args:'
+p178
+sI5087
+S'            args = request.args'
+p179
+ssg85
+S"(self=<gluon.tools.Service object>, args=['transactions'])"
+p180
+sg87
+S'serve_run'
+p181
+sa(dp182
+g64
+S'/home/cc5985/web2py/web2py/gluon/tools.py'
+p183
+sg66
+(dp184
+S'a'
+S'()'
+p185
+sS'b'
+S"{'id': 'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5'}"
+p186
+sS'f'
+S'<function transactions>'
+p187
+ssg72
+I5506
+sg73
+(dp188
+I5504
+S'            return universal_caller(f, *a, **b)'
+p189
+sI5505
+S'        else:'
+p190
+sI5506
+S'            return f(*a, **b)'
+p191
+sI5507
+S''
+sI5508
+S''
+sI5509
+S'def completion(callback):'
+p192
+sI5510
+S'    """'
+p193
+sI5501
+S'    # but the default implmentation is the simplest: just pass the arguments we got, with no checking'
+p194
+sI5502
+S'    def call_service_function(self, f, *a, **b):'
+p195
+sI5503
+S'        if self.check_args:'
+p196
+ssg85
+S"(self=<gluon.tools.Service object>, f=<function transactions>, *a=(), **b={'id': 'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5'})"
+p197
+sg87
+S'call_service_function'
+p198
+sa(dp199
+g64
+S'/home/cc5985/web2py/web2py/applications/app1/controllers/api.py'
+p200
+sg66
+(dp201
+S'record'
+p202
+S"('44882001bc7b247952128ffd932c7b1ce768e5226e51e86d056c101ed48a96eb', 5292, 1, 'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', 51L, 500000, 100, datetime.datetime(2018, 8, 10, 13, 41, 11, 488804), datetime.datetime(2018, 8, 10, 13, 41, 11, 488804), 22728966934528L, 'AAAAANJzNMRdxNYi3nxM/hO1GbWpirESedpy+qj9LDU9+RJM...3KEYIcYtH8zxganN0ML5Q+7oaNjHNmCYqp8N+xy/W7iT6PCkD', 'AAAAAAAHoSAAAAAAAAAAZAAAAAAAAAAAAAAAAAAAAAAAAAAA...AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=', 'AAAAAAAAAGQAAAACAAAAAAAAFKwAAAAAAAAAAAsTA/8q28Si...AAAAAMwAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA', 'AAAAAgAAAAMAABR8AAAAAAAAAADSczTEXcTWIt58TP4TtRm1...AADMAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA==', ['Z/zquLUVOu/ky3SSSpYbIaXss01vvTJ2KwIT9yhGCHGLR/M8YGpzdDC+UPu6GjYxzZgmKqfDfscv1u4k+jwpAw=='], 'none', None, None, 22728966934540L, 22728966934528L, ...)"
+p203
+sS'fromer'
+p204
+S'None'
+p205
+ssg72
+I124
+sg73
+(dp206
+I128
+S"                            'transaction_id': transaction_id,"
+p207
+sI119
+S"                toer=record['to']"
+p208
+sI120
+S"                amount=record['amount']"
+p209
+sI121
+S"                asset_code=record['asset_code']"
+p210
+sI122
+S"                asset_issuer=record['asset_issuer']"
+p211
+sI123
+S"            elif details.has_key('funder'):"
+p212
+sI124
+S"                fromer=record['funder']"
+p213
+sI125
+S"                toer=record['account']"
+p214
+sI126
+S"                amount=record['starting_balance']"
+p215
+sI127
+S'            transaction = {'
+p216
+ssg85
+S"(id='GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', limit=50, page=1, total=200)"
+p217
+sg87
+S'transactions'
+p218
+sasS'pyver'
+p219
+S'Python 2.7.12: /home/cc5985/web2py/web2py/applications/app1/venv/bin/python (prefix: /home/cc5985/web2py/web2py/applications/app1/venv)'
+p220
+sS'session'
+p221
+g59
+(S's\x1a\x00\x00\x00<div><table></table></div>'
+tRp222
+sS'etype'
+p223
+S"<type 'exceptions.TypeError'>"
+p224
+sS'date'
+p225
+S'Mon Aug 13 14:59:08 2018'
+p226
+sS'response'
+p227
+g59
+(S's\x0f<\x00\x00<div><table><tr><td style="font-weight:bold;vertical-align:top;">body</td><td style="vertical-align:top;">:</td><td><div>&lt;cStringIO.StringO object at 0x7fdbe841a570&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cookies</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">session_id_app1</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-0ab0cfb7-0655-45f4-afaa-76f16bb671bf<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div>/</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">delimiters</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>{{</div></td></tr><tr><td><div>}}</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">files</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">flash</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">form_label_separator</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">formstyle</td><td style="vertical-align:top;">:</td><td><div>bootstrap4_inline</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">generic_patterns</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>*</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">google_analytics_id</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">headers</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">Access-Control-Allow-Origin</td><td style="vertical-align:top;">:</td><td><div>*</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">X-Powered-By</td><td style="vertical-align:top;">:</td><td><div>web2py</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">menu</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div><table><tr><td><div>Home</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/app1/default/index</div></td></tr><tr><td><div><table></table></div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>My Sites</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/site</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>This App</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>#</div></td></tr><tr><td><div><table><tr><td><div><table><tr><td><div>Design</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/design/app1</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Controller</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/edit/app1/controllers/api.py</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>View</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/edit/app1/views/api/call.html</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>DB Model</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/edit/app1/models/db.py</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Menu Model</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/edit/app1/models/menu.py</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Config.ini</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/edit/app1/private/appconfig.ini</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Layout</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/edit/app1/views/layout.html</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Stylesheet</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/edit/app1/static/css/web2py-bootstrap3.css</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Database</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/app1/appadmin/index</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Errors</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/errors/app1</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>About</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/about/app1</div></td></tr></table></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>web2py.com</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>#</div></td></tr><tr><td><div><table><tr><td><div><table><tr><td><div>Download</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/examples/default/download</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Support</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/examples/default/support</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Demo</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://web2py.com/demo_admin</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Quick Examples</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://web2py.com/examples/default/examples</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>FAQ</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://web2py.com/AlterEgo</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Videos</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/examples/default/videos/</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Free Applications</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://web2py.com/appliances</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Plugins</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://web2py.com/plugins</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Recipes</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://web2pyslices.com/</div></td></tr></table></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Documentation</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>#</div></td></tr><tr><td><div><table><tr><td><div><table><tr><td><div>Online book</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Preface</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/00</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Introduction</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/01</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Python</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/02</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Overview</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/03</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>The Core</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/04</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>The Views</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/05</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Database</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/06</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Forms and Validators</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/07</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Email and SMS</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/08</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Access Control</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/09</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Services</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/10</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Ajax Recipes</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/11</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Components and Plugins</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/12</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Deployment Recipes</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/13</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Other Recipes</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/14</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Helping web2py</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/15</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Buy web2py\'s book</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://stores.lulu.com/web2py</div></td></tr></table></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Community</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>None</div></td></tr><tr><td><div><table><tr><td><div><table><tr><td><div>Groups</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/examples/default/usergroups</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Twitter</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://twitter.com/web2py</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Live Chat</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://webchat.freenode.net/?channels=web2py</div></td></tr></table></div></td></tr></table></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">meta</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">author</td><td style="vertical-align:top;">:</td><td><div>Your Name &lt;you@example.com&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">description</td><td style="vertical-align:top;">:</td><td><div>a cool new app</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">generator</td><td style="vertical-align:top;">:</td><td><div>Web2py Web Framework</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">keywords</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>web2py</div></td></tr><tr><td><div>python</div></td></tr><tr><td><div>framework</div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">models_to_run</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>^\\w+\\.py$</div></td></tr><tr><td><div>^api/\\w+\\.py$</div></td></tr><tr><td><div>^api/call/\\w+\\.py$</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">postprocessing</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_client</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_cookie_compression_level</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_cookie_expires</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_data_name</td><td style="vertical-align:top;">:</td><td><div>session_data_app1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_file</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_filename</td><td style="vertical-align:top;">:</td><td><div>/home/cc5985/web2py/web2py/applications/app1/sessions/127.0.0.1-0ab0cfb7-0655-45f4-afaa-76f16bb671bf</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_hash</td><td style="vertical-align:top;">:</td><td><div>c0762cbf4baf7f9af97c051e7fcb8083</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-0ab0cfb7-0655-45f4-afaa-76f16bb671bf</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_name</td><td style="vertical-align:top;">:</td><td><div>session_id_app1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_masterapp</td><td style="vertical-align:top;">:</td><td><div>app1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_new</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_storage_type</td><td style="vertical-align:top;">:</td><td><div>file</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">status</td><td style="vertical-align:top;">:</td><td><div>200</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">view</td><td style="vertical-align:top;">:</td><td><div>api/call.html</div></td></tr></table></div>'
+tRp228
+sS'locals'
+p229
+(dp230
+S'constant'
+p231
+S'<applications.app1.modules.constant.Constant instance>'
+p232
+sS'asset_issuer'
+p233
+S"'Fotono'"
+p234
+sS'transaction_hash'
+p235
+S"'44882001bc7b247952128ffd932c7b1ce768e5226e51e86d056c101ed48a96eb'"
+p236
+sS'result'
+p237
+S"{'id': 'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', 'transactions': []}"
+p238
+sS'total'
+p239
+S'200'
+p240
+sS'id'
+p241
+S"'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5'"
+p242
+sS'rows'
+p243
+S"[('44882001bc7b247952128ffd932c7b1ce768e5226e51e86d056c101ed48a96eb', 5292, 1, 'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', 51L, 500000, 100, datetime.datetime(2018, 8, 10, 13, 41, 11, 488804), datetime.datetime(2018, 8, 10, 13, 41, 11, 488804), 22728966934528L, 'AAAAANJzNMRdxNYi3nxM/hO1GbWpirESedpy+qj9LDU9+RJM...3KEYIcYtH8zxganN0ML5Q+7oaNjHNmCYqp8N+xy/W7iT6PCkD', 'AAAAAAAHoSAAAAAAAAAAZAAAAAAAAAAAAAAAAAAAAAAAAAAA...AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=', 'AAAAAAAAAGQAAAACAAAAAAAAFKwAAAAAAAAAAAsTA/8q28Si...AAAAAMwAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA', 'AAAAAgAAAAMAABR8AAAAAAAAAADSczTEXcTWIt58TP4TtRm1...AADMAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA==', ['Z/zquLUVOu/ky3SSSpYbIaXss01vvTJ2KwIT9yhGCHGLR/M8YGpzdDC+UPu6GjYxzZgmKqfDfscv1u4k+jwpAw=='], 'none', None, None, 22728966934540L, 22728966934528L, ...), ('44882001bc7b247952128ffd932c7b1ce768e5226e51e86d056c101ed48a96eb', 5292, 1, 'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', 51L, 500000, 100, datetime.datetime(2018, 8, 10, 13, 41, 11, 488804), datetime.datetime(2018, 8, 10, 13, 41, 11, 488804), 22728966934528L, 'AAAAANJzNMRdxNYi3nxM/hO1GbWpirESedpy+qj9LDU9+RJM...3KEYIcYtH8zxganN0ML5Q+7oaNjHNmCYqp8N+xy/W7iT6PCkD', 'AAAAAAAHoSAAAAAAAAAAZAAAAAAAAAAAAAAAAAAAAAAAAAAA...AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=', 'AAAAAAAAAGQAAAACAAAAAAAAFKwAAAAAAAAAAAsTA/8q28Si...AAAAAMwAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA', 'AAAAAgAAAAMAABR8AAAAAAAAAADSczTEXcTWIt58TP4TtRm1...AADMAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA==', ['Z/zquLUVOu/ky3SSSpYbIaXss01vvTJ2KwIT9yhGCHGLR/M8YGpzdDC+UPu6GjYxzZgmKqfDfscv1u4k+jwpAw=='], 'none', None, None, 22728966934539L, 22728966934528L, ...), ('44882001bc7b247952128ffd932c7b1ce768e5226e51e86d056c101ed48a96eb', 5292, 1, 'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', 51L, 500000, 100, datetime.datetime(2018, 8, 10, 13, 41, 11, 488804), datetime.datetime(2018, 8, 10, 13, 41, 11, 488804), 22728966934528L, 'AAAAANJzNMRdxNYi3nxM/hO1GbWpirESedpy+qj9LDU9+RJM...3KEYIcYtH8zxganN0ML5Q+7oaNjHNmCYqp8N+xy/W7iT6PCkD', 'AAAAAAAHoSAAAAAAAAAAZAAAAAAAAAAAAAAAAAAAAAAAAAAA...AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=', 'AAAAAAAAAGQAAAACAAAAAAAAFKwAAAAAAAAAAAsTA/8q28Si...AAAAAMwAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA', 'AAAAAgAAAAMAABR8AAAAAAAAAADSczTEXcTWIt58TP4TtRm1...AADMAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA==', ['Z/zquLUVOu/ky3SSSpYbIaXss01vvTJ2KwIT9yhGCHGLR/M8YGpzdDC+UPu6GjYxzZgmKqfDfscv1u4k+jwpAw=='], 'none', None, None, 22728966934537L, 22728966934528L, ...), ('44882001bc7b247952128ffd932c7b1ce768e5226e51e86d056c101ed48a96eb', 5292, 1, 'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', 51L, 500000, 100, datetime.datetime(2018, 8, 10, 13, 41, 11, 488804), datetime.datetime(2018, 8, 10, 13, 41, 11, 488804), 22728966934528L, 'AAAAANJzNMRdxNYi3nxM/hO1GbWpirESedpy+qj9LDU9+RJM...3KEYIcYtH8zxganN0ML5Q+7oaNjHNmCYqp8N+xy/W7iT6PCkD', 'AAAAAAAHoSAAAAAAAAAAZAAAAAAAAAAAAAAAAAAAAAAAAAAA...AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=', 'AAAAAAAAAGQAAAACAAAAAAAAFKwAAAAAAAAAAAsTA/8q28Si...AAAAAMwAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA', 'AAAAAgAAAAMAABR8AAAAAAAAAADSczTEXcTWIt58TP4TtRm1...AADMAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA==', ['Z/zquLUVOu/ky3SSSpYbIaXss01vvTJ2KwIT9yhGCHGLR/M8YGpzdDC+UPu6GjYxzZgmKqfDfscv1u4k+jwpAw=='], 'none', None, None, 22728966934593L, 22728966934528L, ...), ('44882001bc7b247952128ffd932c7b1ce768e5226e51e86d056c101ed48a96eb', 5292, 1, 'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', 51L, 500000, 100, datetime.datetime(2018, 8, 10, 13, 41, 11, 488804), datetime.datetime(2018, 8, 10, 13, 41, 11, 488804), 22728966934528L, 'AAAAANJzNMRdxNYi3nxM/hO1GbWpirESedpy+qj9LDU9+RJM...3KEYIcYtH8zxganN0ML5Q+7oaNjHNmCYqp8N+xy/W7iT6PCkD', 'AAAAAAAHoSAAAAAAAAAAZAAAAAAAAAAAAAAAAAAAAAAAAAAA...AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=', 'AAAAAAAAAGQAAAACAAAAAAAAFKwAAAAAAAAAAAsTA/8q28Si...AAAAAMwAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA', 'AAAAAgAAAAMAABR8AAAAAAAAAADSczTEXcTWIt58TP4TtRm1...AADMAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA==', ['Z/zquLUVOu/ky3SSSpYbIaXss01vvTJ2KwIT9yhGCHGLR/M8YGpzdDC+UPu6GjYxzZgmKqfDfscv1u4k+jwpAw=='], 'none', None, None, 22728966934592L, 22728966934528L, ...), ('44882001bc7b247952128ffd932c7b1ce768e5226e51e86d056c101ed48a96eb', 5292, 1, 'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', 51L, 500000, 100, datetime.datetime(2018, 8, 10, 13, 41, 11, 488804), datetime.datetime(2018, 8, 10, 13, 41, 11, 488804), 22728966934528L, 'AAAAANJzNMRdxNYi3nxM/hO1GbWpirESedpy+qj9LDU9+RJM...3KEYIcYtH8zxganN0ML5Q+7oaNjHNmCYqp8N+xy/W7iT6PCkD', 'AAAAAAAHoSAAAAAAAAAAZAAAAAAAAAAAAAAAAAAAAAAAAAAA...AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=', 'AAAAAAAAAGQAAAACAAAAAAAAFKwAAAAAAAAAAAsTA/8q28Si...AAAAAMwAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA', 'AAAAAgAAAAMAABR8AAAAAAAAAADSczTEXcTWIt58TP4TtRm1...AADMAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA==', ['Z/zquLUVOu/ky3SSSpYbIaXss01vvTJ2KwIT9yhGCHGLR/M8YGpzdDC+UPu6GjYxzZgmKqfDfscv1u4k+jwpAw=='], 'none', None, None, 22728966934591L, 22728966934528L, ...), ('44882001bc7b247952128ffd932c7b1ce768e5226e51e86d056c101ed48a96eb', 5292, 1, 'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', 51L, 500000, 100, datetime.datetime(2018, 8, 10, 13, 41, 11, 488804), datetime.datetime(2018, 8, 10, 13, 41, 11, 488804), 22728966934528L, 'AAAAANJzNMRdxNYi3nxM/hO1GbWpirESedpy+qj9LDU9+RJM...3KEYIcYtH8zxganN0ML5Q+7oaNjHNmCYqp8N+xy/W7iT6PCkD', 'AAAAAAAHoSAAAAAAAAAAZAAAAAAAAAAAAAAAAAAAAAAAAAAA...AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=', 'AAAAAAAAAGQAAAACAAAAAAAAFKwAAAAAAAAAAAsTA/8q28Si...AAAAAMwAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA', 'AAAAAgAAAAMAABR8AAAAAAAAAADSczTEXcTWIt58TP4TtRm1...AADMAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA==', ['Z/zquLUVOu/ky3SSSpYbIaXss01vvTJ2KwIT9yhGCHGLR/M8YGpzdDC+UPu6GjYxzZgmKqfDfscv1u4k+jwpAw=='], 'none', None, None, 22728966934595L, 22728966934528L, ...), ('44882001bc7b247952128ffd932c7b1ce768e5226e51e86d056c101ed48a96eb', 5292, 1, 'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', 51L, 500000, 100, datetime.datetime(2018, 8, 10, 13, 41, 11, 488804), datetime.datetime(2018, 8, 10, 13, 41, 11, 488804), 22728966934528L, 'AAAAANJzNMRdxNYi3nxM/hO1GbWpirESedpy+qj9LDU9+RJM...3KEYIcYtH8zxganN0ML5Q+7oaNjHNmCYqp8N+xy/W7iT6PCkD', 'AAAAAAAHoSAAAAAAAAAAZAAAAAAAAAAAAAAAAAAAAAAAAAAA...AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=', 'AAAAAAAAAGQAAAACAAAAAAAAFKwAAAAAAAAAAAsTA/8q28Si...AAAAAMwAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA', 'AAAAAgAAAAMAABR8AAAAAAAAAADSczTEXcTWIt58TP4TtRm1...AADMAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA==', ['Z/zquLUVOu/ky3SSSpYbIaXss01vvTJ2KwIT9yhGCHGLR/M8YGpzdDC+UPu6GjYxzZgmKqfDfscv1u4k+jwpAw=='], 'none', None, None, 22728966934538L, 22728966934528L, ...), ('44882001bc7b247952128ffd932c7b1ce768e5226e51e86d056c101ed48a96eb', 5292, 1, 'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', 51L, 500000, 100, datetime.datetime(2018, 8, 10, 13, 41, 11, 488804), datetime.datetime(2018, 8, 10, 13, 41, 11, 488804), 22728966934528L, 'AAAAANJzNMRdxNYi3nxM/hO1GbWpirESedpy+qj9LDU9+RJM...3KEYIcYtH8zxganN0ML5Q+7oaNjHNmCYqp8N+xy/W7iT6PCkD', 'AAAAAAAHoSAAAAAAAAAAZAAAAAAAAAAAAAAAAAAAAAAAAAAA...AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=', 'AAAAAAAAAGQAAAACAAAAAAAAFKwAAAAAAAAAAAsTA/8q28Si...AAAAAMwAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA', 'AAAAAgAAAAMAABR8AAAAAAAAAADSczTEXcTWIt58TP4TtRm1...AADMAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA==', ['Z/zquLUVOu/ky3SSSpYbIaXss01vvTJ2KwIT9yhGCHGLR/M8YGpzdDC+UPu6GjYxzZgmKqfDfscv1u4k+jwpAw=='], 'none', None, None, 22728966934599L, 22728966934528L, ...), ('44882001bc7b247952128ffd932c7b1ce768e5226e51e86d056c101ed48a96eb', 5292, 1, 'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', 51L, 500000, 100, datetime.datetime(2018, 8, 10, 13, 41, 11, 488804), datetime.datetime(2018, 8, 10, 13, 41, 11, 488804), 22728966934528L, 'AAAAANJzNMRdxNYi3nxM/hO1GbWpirESedpy+qj9LDU9+RJM...3KEYIcYtH8zxganN0ML5Q+7oaNjHNmCYqp8N+xy/W7iT6PCkD', 'AAAAAAAHoSAAAAAAAAAAZAAAAAAAAAAAAAAAAAAAAAAAAAAA...AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=', 'AAAAAAAAAGQAAAACAAAAAAAAFKwAAAAAAAAAAAsTA/8q28Si...AAAAAMwAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA', 'AAAAAgAAAAMAABR8AAAAAAAAAADSczTEXcTWIt58TP4TtRm1...AADMAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA==', ['Z/zquLUVOu/ky3SSSpYbIaXss01vvTJ2KwIT9yhGCHGLR/M8YGpzdDC+UPu6GjYxzZgmKqfDfscv1u4k+jwpAw=='], 'none', None, None, 22728966934601L, 22728966934528L, ...), ('44882001bc7b247952128ffd932c7b1ce768e5226e51e86d056c101ed48a96eb', 5292, 1, 'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', 51L, 500000, 100, datetime.datetime(2018, 8, 10, 13, 41, 11, 488804), datetime.datetime(2018, 8, 10, 13, 41, 11, 488804), 22728966934528L, 'AAAAANJzNMRdxNYi3nxM/hO1GbWpirESedpy+qj9LDU9+RJM...3KEYIcYtH8zxganN0ML5Q+7oaNjHNmCYqp8N+xy/W7iT6PCkD', 'AAAAAAAHoSAAAAAAAAAAZAAAAAAAAAAAAAAAAAAAAAAAAAAA...AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=', 'AAAAAAAAAGQAAAACAAAAAAAAFKwAAAAAAAAAAAsTA/8q28Si...AAAAAMwAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA', 'AAAAAgAAAAMAABR8AAAAAAAAAADSczTEXcTWIt58TP4TtRm1...AADMAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA==', ['Z/zquLUVOu/ky3SSSpYbIaXss01vvTJ2KwIT9yhGCHGLR/M8YGpzdDC+UPu6GjYxzZgmKqfDfscv1u4k+jwpAw=='], 'none', None, None, 22728966934603L, 22728966934528L, ...), ('44882001bc7b247952128ffd932c7b1ce768e5226e51e86d056c101ed48a96eb', 5292, 1, 'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', 51L, 500000, 100, datetime.datetime(2018, 8, 10, 13, 41, 11, 488804), datetime.datetime(2018, 8, 10, 13, 41, 11, 488804), 22728966934528L, 'AAAAANJzNMRdxNYi3nxM/hO1GbWpirESedpy+qj9LDU9+RJM...3KEYIcYtH8zxganN0ML5Q+7oaNjHNmCYqp8N+xy/W7iT6PCkD', 'AAAAAAAHoSAAAAAAAAAAZAAAAAAAAAAAAAAAAAAAAAAAAAAA...AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=', 'AAAAAAAAAGQAAAACAAAAAAAAFKwAAAAAAAAAAAsTA/8q28Si...AAAAAMwAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA', 'AAAAAgAAAAMAABR8AAAAAAAAAADSczTEXcTWIt58TP4TtRm1...AADMAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA==', ['Z/zquLUVOu/ky3SSSpYbIaXss01vvTJ2KwIT9yhGCHGLR/M8YGpzdDC+UPu6GjYxzZgmKqfDfscv1u4k+jwpAw=='], 'none', None, None, 22728966934542L, 22728966934528L, ...), ('44882001bc7b247952128ffd932c7b1ce768e5226e51e86d056c101ed48a96eb', 5292, 1, 'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', 51L, 500000, 100, datetime.datetime(2018, 8, 10, 13, 41, 11, 488804), datetime.datetime(2018, 8, 10, 13, 41, 11, 488804), 22728966934528L, 'AAAAANJzNMRdxNYi3nxM/hO1GbWpirESedpy+qj9LDU9+RJM...3KEYIcYtH8zxganN0ML5Q+7oaNjHNmCYqp8N+xy/W7iT6PCkD', 'AAAAAAAHoSAAAAAAAAAAZAAAAAAAAAAAAAAAAAAAAAAAAAAA...AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=', 'AAAAAAAAAGQAAAACAAAAAAAAFKwAAAAAAAAAAAsTA/8q28Si...AAAAAMwAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA', 'AAAAAgAAAAMAABR8AAAAAAAAAADSczTEXcTWIt58TP4TtRm1...AADMAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA==', ['Z/zquLUVOu/ky3SSSpYbIaXss01vvTJ2KwIT9yhGCHGLR/M8YGpzdDC+UPu6GjYxzZgmKqfDfscv1u4k+jwpAw=='], 'none', None, None, 22728966934536L, 22728966934528L, ...), ('44882001bc7b247952128ffd932c7b1ce768e5226e51e86d056c101ed48a96eb', 5292, 1, 'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', 51L, 500000, 100, datetime.datetime(2018, 8, 10, 13, 41, 11, 488804), datetime.datetime(2018, 8, 10, 13, 41, 11, 488804), 22728966934528L, 'AAAAANJzNMRdxNYi3nxM/hO1GbWpirESedpy+qj9LDU9+RJM...3KEYIcYtH8zxganN0ML5Q+7oaNjHNmCYqp8N+xy/W7iT6PCkD', 'AAAAAAAHoSAAAAAAAAAAZAAAAAAAAAAAAAAAAAAAAAAAAAAA...AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=', 'AAAAAAAAAGQAAAACAAAAAAAAFKwAAAAAAAAAAAsTA/8q28Si...AAAAAMwAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA', 'AAAAAgAAAAMAABR8AAAAAAAAAADSczTEXcTWIt58TP4TtRm1...AADMAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA==', ['Z/zquLUVOu/ky3SSSpYbIaXss01vvTJ2KwIT9yhGCHGLR/M8YGpzdDC+UPu6GjYxzZgmKqfDfscv1u4k+jwpAw=='], 'none', None, None, 22728966934535L, 22728966934528L, ...), ('44882001bc7b247952128ffd932c7b1ce768e5226e51e86d056c101ed48a96eb', 5292, 1, 'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', 51L, 500000, 100, datetime.datetime(2018, 8, 10, 13, 41, 11, 488804), datetime.datetime(2018, 8, 10, 13, 41, 11, 488804), 22728966934528L, 'AAAAANJzNMRdxNYi3nxM/hO1GbWpirESedpy+qj9LDU9+RJM...3KEYIcYtH8zxganN0ML5Q+7oaNjHNmCYqp8N+xy/W7iT6PCkD', 'AAAAAAAHoSAAAAAAAAAAZAAAAAAAAAAAAAAAAAAAAAAAAAAA...AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=', 'AAAAAAAAAGQAAAACAAAAAAAAFKwAAAAAAAAAAAsTA/8q28Si...AAAAAMwAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA', 'AAAAAgAAAAMAABR8AAAAAAAAAADSczTEXcTWIt58TP4TtRm1...AADMAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA==', ['Z/zquLUVOu/ky3SSSpYbIaXss01vvTJ2KwIT9yhGCHGLR/M8YGpzdDC+UPu6GjYxzZgmKqfDfscv1u4k+jwpAw=='], 'none', None, None, 22728966934534L, 22728966934528L, ...), ('44882001bc7b247952128ffd932c7b1ce768e5226e51e86d056c101ed48a96eb', 5292, 1, 'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', 51L, 500000, 100, datetime.datetime(2018, 8, 10, 13, 41, 11, 488804), datetime.datetime(2018, 8, 10, 13, 41, 11, 488804), 22728966934528L, 'AAAAANJzNMRdxNYi3nxM/hO1GbWpirESedpy+qj9LDU9+RJM...3KEYIcYtH8zxganN0ML5Q+7oaNjHNmCYqp8N+xy/W7iT6PCkD', 'AAAAAAAHoSAAAAAAAAAAZAAAAAAAAAAAAAAAAAAAAAAAAAAA...AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=', 'AAAAAAAAAGQAAAACAAAAAAAAFKwAAAAAAAAAAAsTA/8q28Si...AAAAAMwAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA', 'AAAAAgAAAAMAABR8AAAAAAAAAADSczTEXcTWIt58TP4TtRm1...AADMAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA==', ['Z/zquLUVOu/ky3SSSpYbIaXss01vvTJ2KwIT9yhGCHGLR/M8YGpzdDC+UPu6GjYxzZgmKqfDfscv1u4k+jwpAw=='], 'none', None, None, 22728966934587L, 22728966934528L, ...), ('44882001bc7b247952128ffd932c7b1ce768e5226e51e86d056c101ed48a96eb', 5292, 1, 'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', 51L, 500000, 100, datetime.datetime(2018, 8, 10, 13, 41, 11, 488804), datetime.datetime(2018, 8, 10, 13, 41, 11, 488804), 22728966934528L, 'AAAAANJzNMRdxNYi3nxM/hO1GbWpirESedpy+qj9LDU9+RJM...3KEYIcYtH8zxganN0ML5Q+7oaNjHNmCYqp8N+xy/W7iT6PCkD', 'AAAAAAAHoSAAAAAAAAAAZAAAAAAAAAAAAAAAAAAAAAAAAAAA...AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=', 'AAAAAAAAAGQAAAACAAAAAAAAFKwAAAAAAAAAAAsTA/8q28Si...AAAAAMwAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA', 'AAAAAgAAAAMAABR8AAAAAAAAAADSczTEXcTWIt58TP4TtRm1...AADMAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA==', ['Z/zquLUVOu/ky3SSSpYbIaXss01vvTJ2KwIT9yhGCHGLR/M8YGpzdDC+UPu6GjYxzZgmKqfDfscv1u4k+jwpAw=='], 'none', None, None, 22728966934533L, 22728966934528L, ...), ('44882001bc7b247952128ffd932c7b1ce768e5226e51e86d056c101ed48a96eb', 5292, 1, 'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', 51L, 500000, 100, datetime.datetime(2018, 8, 10, 13, 41, 11, 488804), datetime.datetime(2018, 8, 10, 13, 41, 11, 488804), 22728966934528L, 'AAAAANJzNMRdxNYi3nxM/hO1GbWpirESedpy+qj9LDU9+RJM...3KEYIcYtH8zxganN0ML5Q+7oaNjHNmCYqp8N+xy/W7iT6PCkD', 'AAAAAAAHoSAAAAAAAAAAZAAAAAAAAAAAAAAAAAAAAAAAAAAA...AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=', 'AAAAAAAAAGQAAAACAAAAAAAAFKwAAAAAAAAAAAsTA/8q28Si...AAAAAMwAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA', 'AAAAAgAAAAMAABR8AAAAAAAAAADSczTEXcTWIt58TP4TtRm1...AADMAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA==', ['Z/zquLUVOu/ky3SSSpYbIaXss01vvTJ2KwIT9yhGCHGLR/M8YGpzdDC+UPu6GjYxzZgmKqfDfscv1u4k+jwpAw=='], 'none', None, None, 22728966934585L, 22728966934528L, ...), ('44882001bc7b247952128ffd932c7b1ce768e5226e51e86d056c101ed48a96eb', 5292, 1, 'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', 51L, 500000, 100, datetime.datetime(2018, 8, 10, 13, 41, 11, 488804), datetime.datetime(2018, 8, 10, 13, 41, 11, 488804), 22728966934528L, 'AAAAANJzNMRdxNYi3nxM/hO1GbWpirESedpy+qj9LDU9+RJM...3KEYIcYtH8zxganN0ML5Q+7oaNjHNmCYqp8N+xy/W7iT6PCkD', 'AAAAAAAHoSAAAAAAAAAAZAAAAAAAAAAAAAAAAAAAAAAAAAAA...AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=', 'AAAAAAAAAGQAAAACAAAAAAAAFKwAAAAAAAAAAAsTA/8q28Si...AAAAAMwAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA', 'AAAAAgAAAAMAABR8AAAAAAAAAADSczTEXcTWIt58TP4TtRm1...AADMAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA==', ['Z/zquLUVOu/ky3SSSpYbIaXss01vvTJ2KwIT9yhGCHGLR/M8YGpzdDC+UPu6GjYxzZgmKqfDfscv1u4k+jwpAw=='], 'none', None, None, 22728966934584L, 22728966934528L, ...), ('44882001bc7b247952128ffd932c7b1ce768e5226e51e86d056c101ed48a96eb', 5292, 1, 'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', 51L, 500000, 100, datetime.datetime(2018, 8, 10, 13, 41, 11, 488804), datetime.datetime(2018, 8, 10, 13, 41, 11, 488804), 22728966934528L, 'AAAAANJzNMRdxNYi3nxM/hO1GbWpirESedpy+qj9LDU9+RJM...3KEYIcYtH8zxganN0ML5Q+7oaNjHNmCYqp8N+xy/W7iT6PCkD', 'AAAAAAAHoSAAAAAAAAAAZAAAAAAAAAAAAAAAAAAAAAAAAAAA...AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=', 'AAAAAAAAAGQAAAACAAAAAAAAFKwAAAAAAAAAAAsTA/8q28Si...AAAAAMwAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA', 'AAAAAgAAAAMAABR8AAAAAAAAAADSczTEXcTWIt58TP4TtRm1...AADMAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA==', ['Z/zquLUVOu/ky3SSSpYbIaXss01vvTJ2KwIT9yhGCHGLR/M8YGpzdDC+UPu6GjYxzZgmKqfDfscv1u4k+jwpAw=='], 'none', None, None, 22728966934583L, 22728966934528L, ...), ...]"
+p244
+sS'ledger'
+p245
+S'5292'
+p246
+sS'asset_code'
+p247
+S"'native'"
+p248
+sS'my_psycopg'
+p249
+S'<applications.app1.modules.pg_test.PsycoPG instance>'
+p250
+sS'details'
+p251
+S"{u'account': u'GBBQ5VWQOCEKUQ77UZSBY2YHHXYCQKRK56CSJ3CGXY6YULVRU7UCAOUR', u'funder': u'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', u'starting_balance': u'100.0000000'}"
+p252
+sS'fromer'
+p253
+S'None'
+p254
+sS'transaction_id'
+p255
+S'22728966934540L'
+p256
+sS'toer'
+p257
+S'None'
+p258
+sS'memo'
+p259
+S'None'
+p260
+sS'validity'
+p261
+S'True'
+p262
+sS'xdr'
+p263
+S"'AAAAANJzNMRdxNYi3nxM/hO1GbWpirESedpy+qj9LDU9+RJM...3KEYIcYtH8zxganN0ML5Q+7oaNjHNmCYqp8N+xy/W7iT6PCkD'"
+p264
+sS'PsycoPG'
+p265
+S'<class applications.app1.modules.pg_test.PsycoPG>'
+p266
+sg227
+S"{u'_embedded': {u'records': [{u'_links': {u'effects': {u'href': u'http://localhost:8888/operations/1129576402945/effects'}, u'precedes': {u'href': u'http://localhost:8888/effects?order=asc&cursor=1129576402945'}, u'self': {u'href': u'http://localhost:8888/operations/1129576402945'}, u'succeeds': {u'href': u'http://localhost:8888/effects?order=desc&cursor=1129576402945'}, u'transaction': {u'href': u'http://localhost:8888/transactions/b207bf08568...be72ef09d04c7b2ef4b940237dbc5784b6bf4c00c395d467'}}, u'account': u'GB3IFCOI2SUQBQPZ3TM4BPZIDWQP6EI22LG53XBL5IQSTY5HULHTAWNH', u'created_at': u'2018-08-10T03:48:13Z', u'funder': u'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', u'id': u'1129576402945', u'paging_token': u'1129576402945', u'source_account': u'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', u'starting_balance': u'30.0000000', u'transaction_hash': u'b207bf0856840bdebe72ef09d04c7b2ef4b940237dbc5784b6bf4c00c395d467', u'type': u'create_account', ...}, {u'_links': {u'effects': {u'href': u'http://localhost:8888/operations/21406117007361/effects'}, u'precedes': {u'href': u'http://localhost:8888/effects?order=asc&cursor=21406117007361'}, u'self': {u'href': u'http://localhost:8888/operations/21406117007361'}, u'succeeds': {u'href': u'http://localhost:8888/effects?order=desc&cursor=21406117007361'}, u'transaction': {u'href': u'http://localhost:8888/transactions/ebc743855db...1b81b10ae259a462456ea5eca003d6fca43c885b3d7514e5'}}, u'account': u'GDXNGRDZX3P3BWMNTEBM5ZSQQOOIQOO5RPQDIRXOBLQRJRBEOAWZCTPA', u'created_at': u'2018-08-10T13:15:29Z', u'funder': u'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', u'id': u'21406117007361', u'paging_token': u'21406117007361', u'source_account': u'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', u'starting_balance': u'30.0000000', u'transaction_hash': u'ebc743855db20eec1b81b10ae259a462456ea5eca003d6fca43c885b3d7514e5', u'type': u'create_account', ...}, {u'_links': {u'effects': {u'href': u'http://localhost:8888/operations/21414706941953/effects'}, u'precedes': {u'href': u'http://localhost:8888/effects?order=asc&cursor=21414706941953'}, u'self': {u'href': u'http://localhost:8888/operations/21414706941953'}, u'succeeds': {u'href': u'http://localhost:8888/effects?order=desc&cursor=21414706941953'}, u'transaction': {u'href': u'http://localhost:8888/transactions/77aaf85245e...b1c361b5be1e08f8ed2ff03d2b029cf1be4765fbfcd3f044'}}, u'account': u'GAPGOOP2XL6NKP3BU2WY6N7JLBFY2ECWCSCBHDT73CBE3C2J2OGXNNRZ', u'created_at': u'2018-08-10T13:15:39Z', u'funder': u'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', u'id': u'21414706941953', u'paging_token': u'21414706941953', u'source_account': u'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', u'starting_balance': u'30.0000000', u'transaction_hash': u'77aaf85245efc40bb1c361b5be1e08f8ed2ff03d2b029cf1be4765fbfcd3f044', u'type': u'create_account', ...}, {u'_links': {u'effects': {u'href': u'http://localhost:8888/operations/21423296876545/effects'}, u'precedes': {u'href': u'http://localhost:8888/effects?order=asc&cursor=21423296876545'}, u'self': {u'href': u'http://localhost:8888/operations/21423296876545'}, u'succeeds': {u'href': u'http://localhost:8888/effects?order=desc&cursor=21423296876545'}, u'transaction': {u'href': u'http://localhost:8888/transactions/95c5431f902...91e6455b3557a752a2d9ec2898301fcc4fa505847dfcb5bb'}}, u'account': u'GBWH3NCA65E2E5OZ7R5V3UVOEU6IQSJR42CRDTCT52M3M3RSURGWPCWL', u'created_at': u'2018-08-10T13:15:49Z', u'funder': u'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', u'id': u'21423296876545', u'paging_token': u'21423296876545', u'source_account': u'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', u'starting_balance': u'30.0000000', u'transaction_hash': u'95c5431f902d602b91e6455b3557a752a2d9ec2898301fcc4fa505847dfcb5bb', u'type': u'create_account', ...}, {u'_links': {u'effects': {u'href': u'http://localhost:8888/operations/21431886811137/effects'}, u'precedes': {u'href': u'http://localhost:8888/effects?order=asc&cursor=21431886811137'}, u'self': {u'href': u'http://localhost:8888/operations/21431886811137'}, u'succeeds': {u'href': u'http://localhost:8888/effects?order=desc&cursor=21431886811137'}, u'transaction': {u'href': u'http://localhost:8888/transactions/15e1ce62a41...00bc87a6be19826dd81de0167ae894c3b536fdc75a3a8edd'}}, u'account': u'GDVW4GWBXP45VX5JQX3GKBLOERVT35I3FC6XFZR75IUGMXJFEKSGD2OJ', u'created_at': u'2018-08-10T13:16:00Z', u'funder': u'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', u'id': u'21431886811137', u'paging_token': u'21431886811137', u'source_account': u'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', u'starting_balance': u'30.0000000', u'transaction_hash': u'15e1ce62a41b8e8600bc87a6be19826dd81de0167ae894c3b536fdc75a3a8edd', u'type': u'create_account', ...}, {u'_links': {u'effects': {u'href': u'http://localhost:8888/operations/21440476745729/effects'}, u'precedes': {u'href': u'http://localhost:8888/effects?order=asc&cursor=21440476745729'}, u'self': {u'href': u'http://localhost:8888/operations/21440476745729'}, u'succeeds': {u'href': u'http://localhost:8888/effects?order=desc&cursor=21440476745729'}, u'transaction': {u'href': u'http://localhost:8888/transactions/5a9cba44d9a...0b12915828cdaa4c45e4e9f9d290fd19d9dc7895c615092a'}}, u'account': u'GD4IXRUFCI3PLYZWEIND5G6FXFYD4DGFY52ISLBNNBV4L4ANK4AXRJEW', u'created_at': u'2018-08-10T13:16:10Z', u'funder': u'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', u'id': u'21440476745729', u'paging_token': u'21440476745729', u'source_account': u'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', u'starting_balance': u'30.0000000', u'transaction_hash': u'5a9cba44d9ad4e560b12915828cdaa4c45e4e9f9d290fd19d9dc7895c615092a', u'type': u'create_account', ...}, {u'_links': {u'effects': {u'href': u'http://localhost:8888/operations/21449066680321/effects'}, u'precedes': {u'href': u'http://localhost:8888/effects?order=asc&cursor=21449066680321'}, u'self': {u'href': u'http://localhost:8888/operations/21449066680321'}, u'succeeds': {u'href': u'http://localhost:8888/effects?order=desc&cursor=21449066680321'}, u'transaction': {u'href': u'http://localhost:8888/transactions/69e97fc670c...b26d1800881bbb914ee4902e840a843fcd34c1b5326a5f32'}}, u'account': u'GAVHYAXKLSOTMYRWMQWKDGQNKROFETYW4OHKPRV4HUQG3QPGESOFPQOA', u'created_at': u'2018-08-10T13:16:20Z', u'funder': u'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', u'id': u'21449066680321', u'paging_token': u'21449066680321', u'source_account': u'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', u'starting_balance': u'30.0000000', u'transaction_hash': u'69e97fc670c5cdc9b26d1800881bbb914ee4902e840a843fcd34c1b5326a5f32', u'type': u'create_account', ...}, {u'_links': {u'effects': {u'href': u'http://localhost:8888/operations/21457656614913/effects'}, u'precedes': {u'href': u'http://localhost:8888/effects?order=asc&cursor=21457656614913'}, u'self': {u'href': u'http://localhost:8888/operations/21457656614913'}, u'succeeds': {u'href': u'http://localhost:8888/effects?order=desc&cursor=21457656614913'}, u'transaction': {u'href': u'http://localhost:8888/transactions/43c21877e9c...183a0df80682bf381ed3478dbc06819f2f2ac6a2102d9923'}}, u'account': u'GAOYZVQFKWY2KEFF4I5ZMIXA4OGAPVFGWJBJRUPZZX2P7A6LUJXMPLO7', u'created_at': u'2018-08-10T13:16:30Z', u'funder': u'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', u'id': u'21457656614913', u'paging_token': u'21457656614913', u'source_account': u'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', u'starting_balance': u'30.0000000', u'transaction_hash': u'43c21877e9ce31c7183a0df80682bf381ed3478dbc06819f2f2ac6a2102d9923', u'type': u'create_account', ...}, {u'_links': {u'effects': {u'href': u'http://localhost:8888/operations/21466246549505/effects'}, u'precedes': {u'href': u'http://localhost:8888/effects?order=asc&cursor=21466246549505'}, u'self': {u'href': u'http://localhost:8888/operations/21466246549505'}, u'succeeds': {u'href': u'http://localhost:8888/effects?order=desc&cursor=21466246549505'}, u'transaction': {u'href': u'http://localhost:8888/transactions/4daf5be4fb2...905b910386461780635525e61c0d8688c01631cde239a5d0'}}, u'account': u'GDCKVLTNIEGGKC4AZPDGGHV7VIDOZ4HKVSN77T5KH5ETA4RL6IX5JFGG', u'created_at': u'2018-08-10T13:16:40Z', u'funder': u'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', u'id': u'21466246549505', u'paging_token': u'21466246549505', u'source_account': u'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', u'starting_balance': u'30.0000000', u'transaction_hash': u'4daf5be4fb2f4208905b910386461780635525e61c0d8688c01631cde239a5d0', u'type': u'create_account', ...}, {u'_links': {u'effects': {u'href': u'http://localhost:8888/operations/21474836484097/effects'}, u'precedes': {u'href': u'http://localhost:8888/effects?order=asc&cursor=21474836484097'}, u'self': {u'href': u'http://localhost:8888/operations/21474836484097'}, u'succeeds': {u'href': u'http://localhost:8888/effects?order=desc&cursor=21474836484097'}, u'transaction': {u'href': u'http://localhost:8888/transactions/a9cf184c562...24e8f050f24f1e463b12203222e87a01578fda9c1b2d0bed'}}, u'account': u'GAT73BUB3WJDW4D5VTTKZ57K34RYODVDPZRPXBJQ6EZP7HH52USS7EGY', u'created_at': u'2018-08-10T13:16:50Z', u'funder': u'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', u'id': u'21474836484097', u'paging_token': u'21474836484097', u'source_account': u'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', u'starting_balance': u'30.0000000', u'transaction_hash': u'a9cf184c5628b0f824e8f050f24f1e463b12203222e87a01578fda9c1b2d0bed', u'type': u'create_account', ...}, {u'_links': {u'effects': {u'href': u'http://localhost:8888/operations/21483426418689/effects'}, u'precedes': {u'href': u'http://localhost:8888/effects?order=asc&cursor=21483426418689'}, u'self': {u'href': u'http://localhost:8888/operations/21483426418689'}, u'succeeds': {u'href': u'http://localhost:8888/effects?order=desc&cursor=21483426418689'}, u'transaction': {u'href': u'http://localhost:8888/transactions/8288f19ef75...e892d5beb3916068b5a7e291c55d07c82bacee00521f75e0'}}, u'account': u'GDRAP6AVPWCUPMM57DOW74PV455YIAW2TCQ374QUYQ2YURC2PLNQDMTC', u'created_at': u'2018-08-10T13:17:00Z', u'funder': u'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', u'id': u'21483426418689', u'paging_token': u'21483426418689', u'source_account': u'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', u'starting_balance': u'30.0000000', u'transaction_hash': u'8288f19ef75a3852e892d5beb3916068b5a7e291c55d07c82bacee00521f75e0', u'type': u'create_account', ...}, {u'_links': {u'effects': {u'href': u'http://localhost:8888/operations/21492016353281/effects'}, u'precedes': {u'href': u'http://localhost:8888/effects?order=asc&cursor=21492016353281'}, u'self': {u'href': u'http://localhost:8888/operations/21492016353281'}, u'succeeds': {u'href': u'http://localhost:8888/effects?order=desc&cursor=21492016353281'}, u'transaction': {u'href': u'http://localhost:8888/transactions/5185373baa7...e7e031d515bcf18fe55b742774fbf318ebd39ea3fd49740b'}}, u'account': u'GCXUGWMLM5SC5KN3RQRTVCZHKI3LMXJ6T4LOZVKFXEH6NBHU5W2OUHNQ', u'created_at': u'2018-08-10T13:17:10Z', u'funder': u'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', u'id': u'21492016353281', u'paging_token': u'21492016353281', u'source_account': u'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', u'starting_balance': u'30.0000000', u'transaction_hash': u'5185373baa7c6ca2e7e031d515bcf18fe55b742774fbf318ebd39ea3fd49740b', u'type': u'create_account', ...}, {u'_links': {u'effects': {u'href': u'http://localhost:8888/operations/21500606287873/effects'}, u'precedes': {u'href': u'http://localhost:8888/effects?order=asc&cursor=21500606287873'}, u'self': {u'href': u'http://localhost:8888/operations/21500606287873'}, u'succeeds': {u'href': u'http://localhost:8888/effects?order=desc&cursor=21500606287873'}, u'transaction': {u'href': u'http://localhost:8888/transactions/52aab07e26b...2f0b995d5f1581cf2e69cfdc01d482b140bbf851a834a5a2'}}, u'account': u'GALYOXJTCM3LN4VJMO2N6CHGJVRXP73CCPQZMMI4LOHWFENTRBUSPTC7', u'created_at': u'2018-08-10T13:17:20Z', u'funder': u'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', u'id': u'21500606287873', u'paging_token': u'21500606287873', u'source_account': u'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', u'starting_balance': u'30.0000000', u'transaction_hash': u'52aab07e26bebe9c2f0b995d5f1581cf2e69cfdc01d482b140bbf851a834a5a2', u'type': u'create_account', ...}, {u'_links': {u'effects': {u'href': u'http://localhost:8888/operations/21509196222465/effects'}, u'precedes': {u'href': u'http://localhost:8888/effects?order=asc&cursor=21509196222465'}, u'self': {u'href': u'http://localhost:8888/operations/21509196222465'}, u'succeeds': {u'href': u'http://localhost:8888/effects?order=desc&cursor=21509196222465'}, u'transaction': {u'href': u'http://localhost:8888/transactions/3b4b1156f9a...154f654a28409cfea808d4499787f8cc66d550f04923b3ad'}}, u'account': u'GDKKIGF7DUVGGWFBLI7KANDBIGKWXLGC2SUJYD7KWJTB2RBZEWPGVZHQ', u'created_at': u'2018-08-10T13:17:30Z', u'funder': u'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', u'id': u'21509196222465', u'paging_token': u'21509196222465', u'source_account': u'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', u'starting_balance': u'30.0000000', u'transaction_hash': u'3b4b1156f9a4394a154f654a28409cfea808d4499787f8cc66d550f04923b3ad', u'type': u'create_account', ...}, {u'_links': {u'effects': {u'href': u'http://localhost:8888/operations/21517786157057/effects'}, u'precedes': {u'href': u'http://localhost:8888/effects?order=asc&cursor=21517786157057'}, u'self': {u'href': u'http://localhost:8888/operations/21517786157057'}, u'succeeds': {u'href': u'http://localhost:8888/effects?order=desc&cursor=21517786157057'}, u'transaction': {u'href': u'http://localhost:8888/transactions/5357bfa342d...1ac0fc832c9c30590843fdfb6c8398b5015eb73b85ea4015'}}, u'account': u'GB2KNSIIZZFSHZ47SI7PR6XW42APQELCV47FAMKOJ2FVWYB37JWYATKC', u'created_at': u'2018-08-10T13:17:40Z', u'funder': u'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', u'id': u'21517786157057', u'paging_token': u'21517786157057', u'source_account': u'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', u'starting_balance': u'30.0000000', u'transaction_hash': u'5357bfa342df14401ac0fc832c9c30590843fdfb6c8398b5015eb73b85ea4015', u'type': u'create_account', ...}, {u'_links': {u'effects': {u'href': u'http://localhost:8888/operations/21526376091649/effects'}, u'precedes': {u'href': u'http://localhost:8888/effects?order=asc&cursor=21526376091649'}, u'self': {u'href': u'http://localhost:8888/operations/21526376091649'}, u'succeeds': {u'href': u'http://localhost:8888/effects?order=desc&cursor=21526376091649'}, u'transaction': {u'href': u'http://localhost:8888/transactions/c365cdb1b26...ac4126bc488e8d5291cdace2c8cb443562001ffbd7666249'}}, u'account': u'GDWNVH5V7COYX5L6YXXBSQP63HDYMPFRRMRJBWXSHP2ESCQINLYUOIEI', u'created_at': u'2018-08-10T13:17:50Z', u'funder': u'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', u'id': u'21526376091649', u'paging_token': u'21526376091649', u'source_account': u'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', u'starting_balance': u'30.0000000', u'transaction_hash': u'c365cdb1b26bc7bdac4126bc488e8d5291cdace2c8cb443562001ffbd7666249', u'type': u'create_account', ...}, {u'_links': {u'effects': {u'href': u'http://localhost:8888/operations/21534966026241/effects'}, u'precedes': {u'href': u'http://localhost:8888/effects?order=asc&cursor=21534966026241'}, u'self': {u'href': u'http://localhost:8888/operations/21534966026241'}, u'succeeds': {u'href': u'http://localhost:8888/effects?order=desc&cursor=21534966026241'}, u'transaction': {u'href': u'http://localhost:8888/transactions/a709f92b961...16155d032331a3f7602dca7a80f9f7f7b1b52206ba591cd7'}}, u'account': u'GCMPBHVVZLECMK64INL4P5G7BZIYJEGWQK274LRIZY6ARXGGFXHOLFXJ', u'created_at': u'2018-08-10T13:18:00Z', u'funder': u'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', u'id': u'21534966026241', u'paging_token': u'21534966026241', u'source_account': u'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', u'starting_balance': u'30.0000000', u'transaction_hash': u'a709f92b9613539816155d032331a3f7602dca7a80f9f7f7b1b52206ba591cd7', u'type': u'create_account', ...}, {u'_links': {u'effects': {u'href': u'http://localhost:8888/operations/21543555960833/effects'}, u'precedes': {u'href': u'http://localhost:8888/effects?order=asc&cursor=21543555960833'}, u'self': {u'href': u'http://localhost:8888/operations/21543555960833'}, u'succeeds': {u'href': u'http://localhost:8888/effects?order=desc&cursor=21543555960833'}, u'transaction': {u'href': u'http://localhost:8888/transactions/06ac43b0707...bdfb2f1146a0c1f72557e1e8fa967855ea696f6a76bb00e3'}}, u'account': u'GAMR2KDEN3E5NYUULXZBLMRFW7MVUXGKVDA5TZVOVSQBW2SDMAPD5VXN', u'created_at': u'2018-08-10T13:18:10Z', u'funder': u'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', u'id': u'21543555960833', u'paging_token': u'21543555960833', u'source_account': u'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', u'starting_balance': u'30.0000000', u'transaction_hash': u'06ac43b0707984adbdfb2f1146a0c1f72557e1e8fa967855ea696f6a76bb00e3', u'type': u'create_account', ...}, {u'_links': {u'effects': {u'href': u'http://localhost:8888/operations/21552145895425/effects'}, u'precedes': {u'href': u'http://localhost:8888/effects?order=asc&cursor=21552145895425'}, u'self': {u'href': u'http://localhost:8888/operations/21552145895425'}, u'succeeds': {u'href': u'http://localhost:8888/effects?order=desc&cursor=21552145895425'}, u'transaction': {u'href': u'http://localhost:8888/transactions/67942fd654a...757d49e190a5b90cf1a7fedc7c86d32188b7be5e6827bea5'}}, u'account': u'GBXL5MYHORY2257QLCBKD4QAQBLXDEMA2OYCVLKWSLHXVEXRNZALGWI3', u'created_at': u'2018-08-10T13:18:20Z', u'funder': u'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', u'id': u'21552145895425', u'paging_token': u'21552145895425', u'source_account': u'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', u'starting_balance': u'30.0000000', u'transaction_hash': u'67942fd654ae8502757d49e190a5b90cf1a7fedc7c86d32188b7be5e6827bea5', u'type': u'create_account', ...}, {u'_links': {u'effects': {u'href': u'http://localhost:8888/operations/21560735830017/effects'}, u'precedes': {u'href': u'http://localhost:8888/effects?order=asc&cursor=21560735830017'}, u'self': {u'href': u'http://localhost:8888/operations/21560735830017'}, u'succeeds': {u'href': u'http://localhost:8888/effects?order=desc&cursor=21560735830017'}, u'transaction': {u'href': u'http://localhost:8888/transactions/223bd9b5726...8c1e3c45a908b4aa7725fc235e1ee96295725ffb62058ea5'}}, u'account': u'GBXZRQM4CZMGSPYNRB24FDQFYGEOLVLBGF6LP4KHCUL6MSBYBSLXRPGW', u'created_at': u'2018-08-10T13:18:30Z', u'funder': u'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', u'id': u'21560735830017', u'paging_token': u'21560735830017', u'source_account': u'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', u'starting_balance': u'30.0000000', u'transaction_hash': u'223bd9b5726e4f648c1e3c45a908b4aa7725fc235e1ee96295725ffb62058ea5', u'type': u'create_account', ...}, ...]}, u'_links': {u'next': {u'href': u'http://localhost:8888/accounts/GDJHGNGELXCNMIW...ayments?cursor=22728966934529&limit=50&order=asc'}, u'prev': {u'href': u'http://localhost:8888/accounts/GDJHGNGELXCNMIW...ayments?cursor=1129576402945&limit=50&order=desc'}, u'self': {u'href': u'http://localhost:8888/accounts/GDJHGNGELXCNMIW...YNJ57EJEZXY5/payments?cursor=&limit=50&order=asc'}}}"
+p267
+sS'memo_type'
+p268
+S"'none'"
+p269
+sS'created_at'
+p270
+S'datetime.datetime(2018, 8, 10, 13, 41, 11, 488804)'
+p271
+sS'record'
+p272
+S"('44882001bc7b247952128ffd932c7b1ce768e5226e51e86d056c101ed48a96eb', 5292, 1, 'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5', 51L, 500000, 100, datetime.datetime(2018, 8, 10, 13, 41, 11, 488804), datetime.datetime(2018, 8, 10, 13, 41, 11, 488804), 22728966934528L, 'AAAAANJzNMRdxNYi3nxM/hO1GbWpirESedpy+qj9LDU9+RJM...3KEYIcYtH8zxganN0ML5Q+7oaNjHNmCYqp8N+xy/W7iT6PCkD', 'AAAAAAAHoSAAAAAAAAAAZAAAAAAAAAAAAAAAAAAAAAAAAAAA...AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=', 'AAAAAAAAAGQAAAACAAAAAAAAFKwAAAAAAAAAAAsTA/8q28Si...AAAAAMwAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA', 'AAAAAgAAAAMAABR8AAAAAAAAAADSczTEXcTWIt58TP4TtRm1...AADMAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA==', ['Z/zquLUVOu/ky3SSSpYbIaXss01vvTJ2KwIT9yhGCHGLR/M8YGpzdDC+UPu6GjYxzZgmKqfDfscv1u4k+jwpAw=='], 'none', None, None, 22728966934540L, 22728966934528L, ...)"
+p273
+sS'amount'
+p274
+S'None'
+p275
+sS'limit'
+p276
+S'50'
+p277
+sS'page'
+p278
+S'1'
+sssS'traceback'
+p279
+S'Traceback (most recent call last):\n  File "/home/cc5985/web2py/web2py/gluon/restricted.py", line 219, in restricted\n    exec(ccode, environment)\n  File "/home/cc5985/web2py/web2py/applications/app1/controllers/api.py", line 231, in <module>\n  File "/home/cc5985/web2py/web2py/gluon/globals.py", line 420, in <lambda>\n    self._caller = lambda f: f()\n  File "/home/cc5985/web2py/web2py/applications/app1/controllers/api.py", line 14, in call\n    return service()\n  File "/home/cc5985/web2py/web2py/gluon/tools.py", line 5473, in __call__\n    return self.serve_run(request.args[1:])\n  File "/home/cc5985/web2py/web2py/gluon/tools.py", line 5090, in serve_run\n    *args[1:], **dict(request.vars)))\n  File "/home/cc5985/web2py/web2py/gluon/tools.py", line 5506, in call_service_function\n    return f(*a, **b)\n  File "/home/cc5985/web2py/web2py/applications/app1/controllers/api.py", line 124, in transactions\n    fromer=record[\'funder\']\nTypeError: tuple indices must be integers, not str\n'
+p280
+s.
