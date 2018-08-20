@@ -4,8 +4,10 @@ import check
 import requests
 import constant as CONSTANT
 import datetime
-from psql import PsycoPG
+from db import PGManager
 import time
+from wrapper import key_generation as KEY_GENERATION
+from wrapper import encryption as ENCRYPTION
 
 # BASE_URL = 'http://localhost:8888'
 # BASE_URL = 'http://http://116.62.226.231:8888'
@@ -95,12 +97,12 @@ def balance(LinkAddress):
 
 # 2. inquire transactions by id
 @service.run
-def transactions(id, limit=50, page=1, asset_code='LINK', asset_issuer=''):
+def transactions(LinkAddress, limit=50, page=1, asset_code='LINK', asset_issuer=''):
     '''
-    :param id:
+    :param LinkAddress:
     :return: a json object, e.g:
     result={
-    id:'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5'
+    LinkAddress:'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5'
     transactions:[
         {
 
@@ -110,30 +112,48 @@ def transactions(id, limit=50, page=1, asset_code='LINK', asset_issuer=''):
         ]
     }
     '''
+
+    Code = 0
+    Message = None
+    Result = None
+    response = {
+        'Code': Code,
+        'Message': Message,
+        'Result': Result
+    }
+
     constant=CONSTANT.Constant('test')
     BASE_URL=constant.BASE_URL
     asset_issuer=constant.ISSUER_ADDRESS
 
     try:
-        id=str(id)
+        id=str(LinkAddress)
         limit=int(limit)
         page=int(page)
 
     except Exception as e:
-        return json.dumps(e)
+        Message=e
+        response['Message']=Message
+        return json.dumps(response)
     if limit>100:
-        return json.dumps({'warning':'limit should be less than 100'})
-    result={
-        'id':None,
-        'transactions':[]
-    }
+        Message = 'limit is too large'
+        response['Message'] = Message
+        return json.dumps(response)
+
     validity=check.check_validity_of_address(id)
     if validity==False:
-        return json.dumps(({'error':'id is invalid'}))
+        Message = 'LinkAddress is invalid'
+        response['Message'] = Message
+        return json.dumps(response)
     else:
+
+        result = {
+            'LinkAddress': LinkAddress,
+            'transactions': []
+        }
+
         # inquire api_server and reformat the response
-        my_psycopg = PsycoPG('horizon_testnet', 'cc5985', 'caichong', 'localhost', '5432')
-        my_psycopg = PsycoPG('horizon','cc5985','Caichong416','localhost','5432')
+        my_psycopg = PGManager(**constant.DB_HORIZON)
         t0=time.time()
         sql='select * from history_transactions inner join history_operations on \
                                   history_transactions.id= history_operations.transaction_id where \
@@ -142,10 +162,10 @@ def transactions(id, limit=50, page=1, asset_code='LINK', asset_issuer=''):
                                    order by history_transactions.created_at ASC limit ' + str(limit) + ' offset ' + str(limit*(page-1))
         rows = my_psycopg.select(sql)
         t=time.time()-t0
-        result['id']=id
+
         cnt=0
         for record in rows:
-            if cnt>=100:
+            if cnt>100:
                 break
 
             transaction_hash=record[0]
@@ -160,16 +180,19 @@ def transactions(id, limit=50, page=1, asset_code='LINK', asset_issuer=''):
             amount = None
             asset_code='native'
             asset_issuer='Fotono'
-            if details.has_key('asset_code') and details.has_key('from') and details.has_key('to'):
+            if details.__contains__('asset_code') and details.__contains__('from') and details.__contains__('to'):
                 fromer=details['from']
                 toer=details['to']
-                amount=details['amount']
+                if fromer==LinkAddress:
+                    amount= '-' + details['amount']
+                else:
+                    amount = '+' + details['amount']
                 try:
                     asset_code=details['asset_code']
                 except:
                     a=1
                 asset_issuer=details['asset_issuer']
-            elif details.has_key('funder'):
+            elif details.__contains__('funder'):
                 fromer=details['funder']
                 toer=details['account']
                 amount=details['starting_balance']
@@ -199,6 +222,15 @@ def transactions(id, limit=50, page=1, asset_code='LINK', asset_issuer=''):
 # 3. post transaction details:
 @service.run
 def orders(OrderNo, UserToken, OrderAmount):
+    '''
+    url='http://localhost:8000/link/api/call/run/orders'
+    data='{"orderno": "123", "usertoken": "ffff", "orderamount": 1234}'
+
+    :param OrderNo:
+    :param UserToken:
+    :param OrderAmount:
+    :return:
+    '''
     response={
         'Code':'',
         'Message':'',
@@ -208,21 +240,38 @@ def orders(OrderNo, UserToken, OrderAmount):
     Message=None
     Result=None
     try:
-        my_psycopg = PsycoPG('lyl_orders', 'cc5985', 'caichong', 'localhost', '5432')
-        # my_psycopg = PsycoPG('lyl_orders', 'cc5985', 'Caichong416', 'localhost', '5432')
+        constant=CONSTANT.Constant('test')
+        my_psycopg = PGManager(**constant.DB_CONNECT_ARGS)
         timestamp=int(time.time())
         sql='insert into orders(usertoken,orderno,orderamount,created_at,is_filled) values(\'' + str(UserToken) + '\',\'' + str(OrderNo) + '\',' + str(OrderAmount) + ',' + str(timestamp) + ',0)'
         my_psycopg.execute(sql)
         Code=1
-        Message='Successful'
 
+
+        # inquire usertoken in table private_keys, if not exists, insert a record
+        sql = 'select * from private_keys where user_token=\'' + UserToken + '\''
+        rows=my_psycopg.select(sql)
+        if len(rows)==0:
+            keypair = KEY_GENERATION.generate_keypairs(1, constant.AES_KEY, constant.AES_IV, False)[0]
+            sql = 'insert into private_keys(user_token,private_key,public_key) values(\'%s\',\'%s\',\'%s\')' % (UserToken, keypair[0], keypair[1])
+            my_psycopg.execute(sql)
+        else:
+            keypair = (rows[0][2],rows[0][3])
+
+        # private_key=ENCRYPTION.decrypt(keypair[0])
+        Result={
+            'UserToken':UserToken,
+            'LinkPrivateKey':keypair[0],
+            'LinkAddress':keypair[1]
+        }
+        Message = 'Successful'
     except Exception as e:
         Code=0
         Message=e
     response={
         'Code': Code,
         'Message': Message,
-        'Result': None
+        'Result': Result
     }
     return json.dumps(response)
 
@@ -309,57 +358,32 @@ def orders(OrderNo, UserToken, OrderAmount):
 def create_table(sql=''):
     '''
     sql='create table orders(id SERIAL primary key ,UserToken varchar(32) not null,OrderNo varchar(32) not null,OrderAmount decimal not null , created_at bigint not null, is_filled int )'
+    sql = 'create table private_keys(id SERIAL primary key ,user_token varchar(32),private_key varchar(80) not null,public_key varchar(80) not null , starting_balance decimal , starting_time bigint, is_activated int )'
     :param sql:
     :return:
     '''
-    my_psycopg = PsycoPG('lyl_orders', 'cc5985', 'caichong', 'localhost', '5432')
+    constant=CONSTANT.Constant('test')
+    my_psycopg = PGManager(**constant.DB_CONNECT_ARGS)
     # my_psycopg = PsycoPG('lyl_orders', 'cc5985', 'Caichong416', 'localhost', '5432')
     result=my_psycopg.create_table(sql)
     return json.dumps(result)
 
+@service.run
+def truncate_tables(table_names=None):
+    '''
 
+    :param table_name:
+    :return:
+    '''
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# test for psycopg2
-# @service.run
-# def test_psycopg2(limit=50, page=1, total_limit=200):
-#     '''
-#     select top 50 * from pagetest
-#     where id not in (select top 9900 id from pagetest order by id)
-#     order by id
-#     :return: a dict such as
-#     {
-#         id: ...,
-#
-#     }
-#     '''
-#     if limit*page > total_limit and total_limit!=0:
-#         return []
-#     from psql import PsycoPG
-#     my_psycopg=PsycoPG('horizon_testnet','cc5985','caichong','localhost','5432')
-#     # select * from history_transactions where created_at not in (select created_at from history_transactions order by created_at limit 100) order by created_at limit 50
-#     rows=my_psycopg.select('select * from history_transactions where created_at not in (select created_at from history_transactions order by created_at limit ' + one_page_limit*(page-1) + ') order by created_at limit ' + one_page_limit)
-#     a=1
-#
-#
+    try:
+        constant=CONSTANT.Constant('test')
+        my_psycopg = PGManager(**constant.DB_CONNECT_ARGS)
+        if table_names==None:
+            table_names=['orders','private_keys']
+        for table_name in table_names:
+            result = my_psycopg.execute('truncate table ' + table_name)
+        result={'Message':'OK'}
+    except Exception as e:
+        result={'Message':e}
+    return json.dumps(result)
