@@ -159,7 +159,7 @@ def transactions(LinkAddress, limit=50, page=1, asset_code='LINK', asset_issuer=
                                   history_transactions.id= history_operations.transaction_id where \
                                    history_transactions.account=\'' + id +'\' and history_operations.details::text like \'%' + asset_code + '%\'  \
                                    and history_operations.details::text like \'%"asset_issuer": "' + asset_issuer + '"%\'  \
-                                   order by history_transactions.created_at ASC limit ' + str(limit) + ' offset ' + str(limit*(page-1))
+                                   order by history_transactions.created_at ASC' # limit ' + str(limit) + ' offset ' + str(limit*(page-1))
         rows = my_psycopg.select(sql)
         t=time.time()-t0
 
@@ -192,36 +192,38 @@ def transactions(LinkAddress, limit=50, page=1, asset_code='LINK', asset_issuer=
                 except:
                     a=1
                 asset_issuer=details['asset_issuer']
+
+                if asset_code == 'LINK' and asset_issuer == constant.ISSUER_ADDRESS:
+                    transaction = {
+                        'transaction_id': transaction_id,
+                        'ledger': ledger,
+                        'created_at': created_at,
+                        'memo_type': memo_type,
+                        'memo': memo,
+                        'transaction_hash': transaction_hash,
+                        'asset_code': asset_code,
+                        'asset_issuer': asset_issuer,
+                        'from': fromer,
+                        'to': toer,
+                        'amount': amount
+                    }
+                    result['transactions'].append(transaction)
+                    cnt += 1
+                else:
+                    # To be implemented...
+                    pass
             elif details.__contains__('funder'):
                 fromer=details['funder']
                 toer=details['account']
                 amount=details['starting_balance']
 
-            if asset_code=='LINK' and asset_issuer==constant.ISSUER_ADDRESS:
-                transaction = {
-                    'transaction_id': transaction_id,
-                    'ledger': ledger,
-                    'created_at': created_at,
-                    'memo_type': memo_type,
-                    'memo': memo,
-                    'transaction_hash': transaction_hash,
-                    'asset_code': asset_code,
-                    'asset_issuer': asset_issuer,
-                    'from': fromer,
-                    'to': toer,
-                    'amount': amount
-                }
-                result['transactions'].append(transaction)
-                cnt += 1
-            else:
-                # To be implemented...
-                pass
+
 
     return json.dumps(result)
 
 # 3. post transaction details:
 @service.run
-def orders(OrderNo, UserToken, OrderAmount):
+def orders( UserToken, OrderAmount,OrderNo=None):
     '''
     url='http://localhost:8000/link/api/call/run/orders'
     data='{"orderno": "123", "usertoken": "ffff", "orderamount": 1234}'

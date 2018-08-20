@@ -18,3 +18,4 @@ sseclient==0.0.18
 stellar-base==0.1.7.3
 toml==0.9.4
 urllib3==1.23
+websocket-client==0.47.0
