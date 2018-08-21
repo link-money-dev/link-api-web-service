@@ -8,7 +8,8 @@ from db import PGManager
 import time
 from wrapper import key_generation as KEY_GENERATION
 from wrapper import encryption as ENCRYPTION
-
+import transaction as TRANSACTION
+import copy
 # BASE_URL = 'http://localhost:8888'
 # BASE_URL = 'http://http://116.62.226.231:8888'
 
@@ -155,75 +156,61 @@ def transactions(LinkAddress, limit=50, page=1, asset_code='LINK', asset_issuer=
         # inquire api_server and reformat the response
         my_psycopg = PGManager(**constant.DB_HORIZON)
         t0=time.time()
-        sql='select * from history_transactions inner join history_operations on \
-                                  history_transactions.id= history_operations.transaction_id where \
-                                   history_transactions.account=\'' + id +'\' and history_operations.details::text like \'%' + asset_code + '%\'  \
-                                   and history_operations.details::text like \'%"asset_issuer": "' + asset_issuer + '"%\'  \
-                                   order by history_transactions.created_at ASC' # limit ' + str(limit) + ' offset ' + str(limit*(page-1))
-        rows = my_psycopg.select(sql)
-        t=time.time()-t0
+        # sql='select * from history_transactions inner join history_operations on \
+        # history_transactions.id= history_operations.transaction_id where \
+        #                            history_transactions.account=\'' + id +'\' and history_operations.details::text like \'%' + asset_code + '%\'  \
+        #                            and history_operations.details::text like \'%"asset_issuer": "' + asset_issuer + '"%\'  \
+        #                            order by history_transactions.created_at ASC limit ' + str(limit) + ' offset ' + str(limit*(page-1))
 
-        cnt=0
-        for record in rows:
-            if cnt>100:
-                break
-
-            transaction_hash=record[0]
-            ledger=record[1]
-            created_at=record[7].strftime('%Y-%m-%dT%H:%M:%S')
-            memo_type=None if record[15]=='none' else record[15]
-            memo=record[16]
-            transaction_id=record[18]
-            details=dict(record[22])
-            fromer = None
-            toer = None
-            amount = None
-            asset_code='native'
-            asset_issuer='Fotono'
-            if details.__contains__('asset_code') and details.__contains__('from') and details.__contains__('to'):
-                fromer=details['from']
-                toer=details['to']
-                if fromer==LinkAddress:
-                    amount= '-' + details['amount']
+        sql0='select id from history_accounts where address=\'' + LinkAddress + '\''
+        sql1='select history_operation_id from history_operation_participants where history_account_id=(%s)' % (sql0,)
+        sql2='select details::text,transaction_id from history_operations as BBB  \
+              where id in (%s) \
+              and details::text like \'%%from%%\' \
+              order by transaction_id limit %d offset %d' % (sql1,limit,limit*(page-1))
+        result_of_details=my_psycopg.select(sql2)
+        '''
+        select id, created_at from history_transactions as AAA where id in 
+        (select transaction_id from history_operations as C where id in (select history_operation_id from history_operation_participants as A 
+        where history_account_id=231))
+        and id in (select transaction_id from history_operations as BBB where id in (select history_operation_id from history_operation_participants where history_account_id=231)
+        and details::text like '%from%')
+        order by created_at
+        '''
+        if len(result_of_details)==0:
+            response['Result'] = result
+            response['Code'] = 1
+            response['Message'] = 'Out of index error'
+        else:
+            transaction_ids=[]
+            for detail in result_of_details:
+                transaction_ids.append(str(detail[1]))
+            transaction_ids=','.join(transaction_ids)
+            sql3='select id, created_at from history_transactions where id in (%s) order by id limit %d offset %d' % (transaction_ids,limit,limit*(page-1))
+            result_of_transactions = my_psycopg.select(sql3)
+            transactions=[]
+            for i in range(len(result_of_details)):
+                detail=json.loads(result_of_details[i][0])
+                transaction=copy.deepcopy(detail)
+                transaction['id']=str(result_of_details[i][1])
+                for tt in result_of_transactions:
+                    if result_of_details[i][1]==tt[0]:
+                        transaction['time']=tt[1].strftime("%Y-%m-%d %H:%M:%S")
+                transactions.append(transaction)
+                if transaction['from']==id:
+                    transaction['amount']='-'+transaction['amount']
                 else:
-                    amount = '+' + details['amount']
-                try:
-                    asset_code=details['asset_code']
-                except:
-                    a=1
-                asset_issuer=details['asset_issuer']
-
-                if asset_code == 'LINK' and asset_issuer == constant.ISSUER_ADDRESS:
-                    transaction = {
-                        'transaction_id': transaction_id,
-                        'ledger': ledger,
-                        'created_at': created_at,
-                        'memo_type': memo_type,
-                        'memo': memo,
-                        'transaction_hash': transaction_hash,
-                        'asset_code': asset_code,
-                        'asset_issuer': asset_issuer,
-                        'from': fromer,
-                        'to': toer,
-                        'amount': amount
-                    }
-                    result['transactions'].append(transaction)
-                    cnt += 1
-                else:
-                    # To be implemented...
-                    pass
-            elif details.__contains__('funder'):
-                fromer=details['funder']
-                toer=details['account']
-                amount=details['starting_balance']
-
-
-
-    return json.dumps(result)
+                    transaction['amount'] = '+' + transaction['amount']
+            result['transactions']=transactions
+            response['Result']=result
+            response['Code']=1
+            response['Message']='Successful'
+            t=time.time()-t0
+    return json.dumps(response)
 
 # 3. post transaction details:
 @service.run
-def orders( UserToken, OrderAmount,OrderNo=None):
+def orders( UserToken, OrderAmount,OrderNo='00000001'):
     '''
     url='http://localhost:8000/link/api/call/run/orders'
     data='{"orderno": "123", "usertoken": "ffff", "orderamount": 1234}'
@@ -248,7 +235,6 @@ def orders( UserToken, OrderAmount,OrderNo=None):
         sql='insert into orders(usertoken,orderno,orderamount,created_at,is_filled) values(\'' + str(UserToken) + '\',\'' + str(OrderNo) + '\',' + str(OrderAmount) + ',' + str(timestamp) + ',0)'
         my_psycopg.execute(sql)
         Code=1
-
 
         # inquire usertoken in table private_keys, if not exists, insert a record
         sql = 'select * from private_keys where user_token=\'' + UserToken + '\''
