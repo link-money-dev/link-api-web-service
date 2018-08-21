@@ -185,8 +185,12 @@ def transactions(LinkAddress, limit=50, page=1, asset_code='LINK', asset_issuer=
             transaction_ids=[]
             for detail in result_of_details:
                 transaction_ids.append(str(detail[1]))
-            transaction_ids=','.join(transaction_ids)
-            sql3='select id, created_at from history_transactions where id in (%s) order by id limit %d offset %d' % (transaction_ids,limit,limit*(page-1))
+            if len(transaction_ids)==1:
+                tmp0=' id=' + transaction_ids[0]
+            else:
+                transaction_ids = ','.join(transaction_ids)
+                tmp0=' id in (' + transaction_ids + ')'
+            sql3='select id, created_at from history_transactions where %s order by id' % (tmp0,)
             result_of_transactions = my_psycopg.select(sql3)
             transactions=[]
             for i in range(len(result_of_details)):
@@ -210,7 +214,7 @@ def transactions(LinkAddress, limit=50, page=1, asset_code='LINK', asset_issuer=
 
 # 3. post transaction details:
 @service.run
-def orders( UserToken, OrderAmount,OrderNo='00000001'):
+def orders( UserToken, OrderAmount):
     '''
     url='http://localhost:8000/link/api/call/run/orders'
     data='{"orderno": "123", "usertoken": "ffff", "orderamount": 1234}'
@@ -232,7 +236,7 @@ def orders( UserToken, OrderAmount,OrderNo='00000001'):
         constant=CONSTANT.Constant('test')
         my_psycopg = PGManager(**constant.DB_CONNECT_ARGS)
         timestamp=int(time.time())
-        sql='insert into orders(usertoken,orderno,orderamount,created_at,is_filled) values(\'' + str(UserToken) + '\',\'' + str(OrderNo) + '\',' + str(OrderAmount) + ',' + str(timestamp) + ',0)'
+        sql='insert into orders(usertoken,orderno,orderamount,created_at,is_filled) values(\'' + str(UserToken) + '\',' + str(OrderAmount) + ',' + str(timestamp) + ',0)'
         my_psycopg.execute(sql)
         Code=1
 
@@ -243,6 +247,10 @@ def orders( UserToken, OrderAmount,OrderNo='00000001'):
             keypair = KEY_GENERATION.generate_keypairs(1, constant.AES_KEY, constant.AES_IV, False)[0]
             sql = 'insert into private_keys(user_token,private_key,public_key) values(\'%s\',\'%s\',\'%s\')' % (UserToken, keypair[0], keypair[1])
             my_psycopg.execute(sql)
+            from wrapper import client as CLIENT
+            client=CLIENT.Client(private_key=constant.SEED,api_server=constant.API_SERVER)
+            client.fund(keypair[1],100)
+
         else:
             keypair = (rows[0][2],rows[0][3])
 
