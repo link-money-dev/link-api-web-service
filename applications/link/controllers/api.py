@@ -167,7 +167,7 @@ def transactions(LinkAddress, limit=50, page=1, asset_code='LINK', asset_issuer=
         sql2='select details::text,transaction_id from history_operations as BBB  \
               where id in (%s) \
               and details::text like \'%%from%%\' \
-              order by transaction_id limit %d offset %d' % (sql1,limit,limit*(page-1))
+              order by transaction_id DESC limit %d offset %d' % (sql1,limit,limit*(page-1))
         result_of_details=my_psycopg.select(sql2)
         '''
         select id, created_at from history_transactions as AAA where id in 
@@ -175,7 +175,7 @@ def transactions(LinkAddress, limit=50, page=1, asset_code='LINK', asset_issuer=
         where history_account_id=231))
         and id in (select transaction_id from history_operations as BBB where id in (select history_operation_id from history_operation_participants where history_account_id=231)
         and details::text like '%from%')
-        order by created_at
+        order by created_at DESC
         '''
         if len(result_of_details)==0:
             response['Result'] = result
