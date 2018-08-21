@@ -236,7 +236,7 @@ def orders( UserToken, OrderAmount):
         constant=CONSTANT.Constant('test')
         my_psycopg = PGManager(**constant.DB_CONNECT_ARGS)
         timestamp=int(time.time())
-        sql='insert into orders(usertoken,orderno,orderamount,created_at,is_filled) values(\'' + str(UserToken) + '\',' + str(OrderAmount) + ',' + str(timestamp) + ',0)'
+        sql='insert into orders(usertoken,orderamount,created_at,is_filled) values(\'' + str(UserToken) + '\',' + str(OrderAmount) + ',' + str(timestamp) + ',0)'
         my_psycopg.execute(sql)
         Code=1
 

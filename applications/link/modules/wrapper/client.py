@@ -1,6 +1,6 @@
 # coding: utf-8
-from address import Keypair, Address
-from builder import Builder
+from .address import Keypair, Address
+from .builder import Builder
 
 class Client:
 
