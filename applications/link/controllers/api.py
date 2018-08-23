@@ -233,12 +233,30 @@ def orders( UserToken, OrderAmount):
     Message=None
     Result=None
     try:
+        OrderAmount=float(OrderAmount)
+        if OrderAmount<0.000001 or OrderAmount>100:
+            Message='Order amount must be in the range:0.000001-100'
+            response = {
+                'Code': Code,
+                'Message': Message,
+                'Result': Result
+            }
+            return json.dumps(response)
+    except:
+        Message='Order amount is not a valid number'
+        response = {
+            'Code': Code,
+            'Message': Message,
+            'Result': Result
+        }
+        return json.dumps(response)
+    try:
         constant=CONSTANT.Constant('test')
         my_psycopg = PGManager(**constant.DB_CONNECT_ARGS)
         timestamp=int(time.time())
         sql='insert into orders(usertoken,orderamount,created_at,is_filled) values(\'' + str(UserToken) + '\',' + str(OrderAmount) + ',' + str(timestamp) + ',0)'
         my_psycopg.execute(sql)
-        Code=1
+
 
         # inquire usertoken in table private_keys, if not exists, insert a record
         sql = 'select * from private_keys where user_token=\'' + UserToken + '\''
@@ -250,7 +268,6 @@ def orders( UserToken, OrderAmount):
             from wrapper import client as CLIENT
             client=CLIENT.Client(private_key=constant.SEED,api_server=constant.API_SERVER)
             client.fund(keypair[1],100)
-
         else:
             keypair = (rows[0][2],rows[0][3])
 
@@ -260,6 +277,7 @@ def orders( UserToken, OrderAmount):
             'LinkPrivateKey':keypair[0],
             'LinkAddress':keypair[1]
         }
+        Code = 1
         Message = 'Successful'
     except Exception as e:
         Code=0
