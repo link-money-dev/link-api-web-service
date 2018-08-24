@@ -26,7 +26,8 @@ class Client:
         try:
             builder.append_create_account_op(destination=destination,starting_balance=amount)
             builder.sign()
-            builder.submit()
+            r=builder.submit()
+            a=1
         except:
             raise Exception('Unknon error')
 

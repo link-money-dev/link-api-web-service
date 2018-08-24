@@ -10,6 +10,7 @@ class PGManager():
         cursor.execute(sql)
         self.conn.commit()
         self.conn.close()
+        return cursor.rowcount
 
     def select(self, sql):
         self.conn = psycopg2.connect(**self.conn_args)

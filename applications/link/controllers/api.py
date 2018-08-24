@@ -10,6 +10,8 @@ from wrapper import key_generation as KEY_GENERATION
 from wrapper import encryption as ENCRYPTION
 import transaction as TRANSACTION
 import copy
+import api_methods
+
 # BASE_URL = 'http://localhost:8888'
 # BASE_URL = 'http://http://116.62.226.231:8888'
 
@@ -48,46 +50,24 @@ def balance(LinkAddress):
     link:123.22
     }
     '''
-    response={
-        'Code':'',
-        'Message':'',
-        'Result':''
-    }
     Code=0
-    Message=None
+    Message='Unsuccessful'
     Result={'LinkAmount':0}
+
+    response = {
+        'Code': Code,
+        'Message': Message,
+        'Result': Result
+    }
 
     try:
         constant=CONSTANT.Constant('test')
-        BASE_URL=constant.BASE_URL
-
-        validity=check.check_validity_of_address(LinkAddress)
-        if validity==False:
-            Code=0
-            Message='Account is invalid'
-            Result={'LinkAmount':0}
-        else:
-            # inquire api_server and reformat the response
-            _response=json.loads(requests.get(BASE_URL+'/accounts/'+LinkAddress).text)
-            id=_response.get('id','None')
-            if id=='None':
-                Code=0
-                Message='Account does not exist'
-                Result={'LinkAmount':0}
-            else:
-                Code=1
-                Message='Successful'
-                Result={'LinkAmount':0}
-                balances=_response.get('balances',[])
-                for item in balances:
-                    item=dict(item)
-                    if item.get('asset_code','') == 'LINK' and item.get('asset_issuer','') == constant.ISSUER_ADDRESS:
-                        Result['LinkAmount']=float(item['balance'])
-
+        balance=api_methods.get_balance(LinkAddress,constant)
+        Code=1
+        Message='Successful'
+        Result=Result={'LinkAmount':balance}
     except Exception as e:
-        Code=0
-        Message="Error"
-        Result={'LinkAmount':0}
+        Message=e.message
     finally:
         response={
             'Code':Code,
@@ -104,18 +84,11 @@ def transactions(LinkAddress, limit=50, page=1, asset_code='LINK', asset_issuer=
     :return: a json object, e.g:
     result={
     LinkAddress:'GDJHGNGELXCNMIW6PRGP4E5VDG22TCVRCJ45U4X2VD6SYNJ57EJEZXY5'
-    transactions:[
-        {
-
-        },
-        {}
-        {}...
-        ]
-    }
+    transactions:[]
     '''
 
     Code = 0
-    Message = None
+    Message = 'Unsuccessful'
     Result = None
     response = {
         'Code': Code,
@@ -255,8 +228,6 @@ def orders( UserToken, OrderAmount):
         my_psycopg = PGManager(**constant.DB_CONNECT_ARGS)
         timestamp=int(time.time())
         sql='insert into orders(usertoken,orderamount,created_at,is_filled) values(\'' + str(UserToken) + '\',' + str(OrderAmount) + ',' + str(timestamp) + ',0)'
-        my_psycopg.execute(sql)
-
 
         # inquire usertoken in table private_keys, if not exists, insert a record
         sql = 'select * from private_keys where user_token=\'' + UserToken + '\''
@@ -265,9 +236,10 @@ def orders( UserToken, OrderAmount):
             keypair = KEY_GENERATION.generate_keypairs(1, constant.AES_KEY, constant.AES_IV, False)[0]
             sql = 'insert into private_keys(user_token,private_key,public_key) values(\'%s\',\'%s\',\'%s\')' % (UserToken, keypair[0], keypair[1])
             my_psycopg.execute(sql)
-            from wrapper import client as CLIENT
-            client=CLIENT.Client(private_key=constant.SEED,api_server=constant.API_SERVER)
-            client.fund(keypair[1],100)
+
+            # from wrapper import client as CLIENT
+            # client=CLIENT.Client(private_key=constant.SEED,api_server=constant.API_SERVER)
+            # client.fund(keypair[1],100)
         else:
             keypair = (rows[0][2],rows[0][3])
 
@@ -279,6 +251,7 @@ def orders( UserToken, OrderAmount):
         }
         Code = 1
         Message = 'Successful'
+
     except Exception as e:
         Code=0
         Message=e
