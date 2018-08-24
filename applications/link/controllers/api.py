@@ -228,7 +228,7 @@ def orders( UserToken, OrderAmount):
         my_psycopg = PGManager(**constant.DB_CONNECT_ARGS)
         timestamp=int(time.time())
         sql='insert into orders(usertoken,orderamount,created_at,is_filled) values(\'' + str(UserToken) + '\',' + str(OrderAmount) + ',' + str(timestamp) + ',0)'
-
+        my_psycopg.execute(sql)
         # inquire usertoken in table private_keys, if not exists, insert a record
         sql = 'select * from private_keys where user_token=\'' + UserToken + '\''
         rows=my_psycopg.select(sql)
