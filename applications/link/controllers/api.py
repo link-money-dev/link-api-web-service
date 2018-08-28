@@ -188,7 +188,7 @@ def transactions(LinkAddress, limit=50, page=1, asset_code='LINK', asset_issuer=
 # √√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√
 # 3. post transaction details:
 @service.run
-def orders( UserToken, OrderAmount):
+def orders(OrderNo, UserToken, OrderAmount):
     '''
     url='http://localhost:8000/link/api/call/run/orders'
     data='{"orderno": "123", "usertoken": "ffff", "orderamount": 1234}'
@@ -228,14 +228,14 @@ def orders( UserToken, OrderAmount):
         constant=CONSTANT.Constant('test')
         my_psycopg = PGManager(**constant.DB_CONNECT_ARGS)
         timestamp=int(time.time())
-        sql='insert into orders(usertoken,orderamount,created_at,is_filled) values(\'' + str(UserToken) + '\',' + str(OrderAmount) + ',' + str(timestamp) + ',0)'
+        sql='insert into orders(orderno, usertoken,orderamount,created_at,is_filled) values(\'' + str(OrderNo) +'\',\'' + str(UserToken) + '\',' + str(OrderAmount) + ',' + str(timestamp) + ',0)'
         my_psycopg.execute(sql)
         # inquire usertoken in table private_keys, if not exists, insert a record
         sql = 'select * from private_keys where user_token=\'' + UserToken + '\''
         rows=my_psycopg.select(sql)
         if len(rows)==0:
             keypair = KEY_GENERATION.generate_keypairs(1, constant.AES_KEY, constant.AES_IV, False)[0]
-            sql = 'insert into private_keys(user_token,private_key,public_key) values(\'%s\',\'%s\',\'%s\')' % (UserToken, keypair[0], keypair[1])
+            sql = 'insert into private_keys(user_token,private_key,public_key,is_activated) values(\'%s\',\'%s\',\'%s\',0)' % (UserToken, keypair[0], keypair[1])
             my_psycopg.execute(sql)
 
             # from wrapper import client as CLIENT
