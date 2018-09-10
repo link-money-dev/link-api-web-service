@@ -17,25 +17,11 @@ import api_methods
 
 service = Service()
 
-
 def call():
     session.forget()
     return service()
 
 
-@service.run
-def add(x,y):
-    x=int(x)
-    y=int(y)
-    result={'result':x+y}
-    return json.dumps(result)
-
-@service.run
-def charge():
-    print('#20')
-    args=request.post_vars
-    args=json.loads(args)
-    return args
 
 # 1. inquire the link balance by id
 # in this api service, we only supply one field request in the api /accounts/{id}
@@ -61,7 +47,7 @@ def balance(LinkAddress):
     }
 
     try:
-        constant=CONSTANT.Constant('test')
+        constant=CONSTANT.Constant('public')
         balance=api_methods.get_balance(LinkAddress,constant)
         Code=1
         Message='Successful'
@@ -96,9 +82,9 @@ def transactions(LinkAddress, limit=50, page=1, asset_code='LINK', asset_issuer=
         'Result': Result
     }
 
-    constant=CONSTANT.Constant('test')
-    BASE_URL=constant.BASE_URL
-    asset_issuer=constant.ISSUER_ADDRESS
+    constant=CONSTANT.Constant('public')
+    # BASE_URL=constant.BASE_URL
+    # asset_issuer=constant.ISSUER_ADDRESS
 
     try:
         id=str(LinkAddress)
@@ -127,7 +113,7 @@ def transactions(LinkAddress, limit=50, page=1, asset_code='LINK', asset_issuer=
         }
 
         # inquire api_server and reformat the response
-        my_psycopg = PGManager(**constant.DB_HORIZON)
+        my_psycopg = PGManager(**constant.HORIZON_DB_CONNECT_ARGS)
         t0=time.time()
         # sql='select * from history_transactions inner join history_operations on \
         # history_transactions.id= history_operations.transaction_id where \
@@ -225,7 +211,7 @@ def orders(OrderNo, UserToken, OrderAmount):
         }
         return json.dumps(response)
     try:
-        constant=CONSTANT.Constant('test')
+        constant=CONSTANT.Constant('public')
         my_psycopg = PGManager(**constant.DB_CONNECT_ARGS)
         timestamp=int(time.time())
         sql='insert into orders(orderno, usertoken,orderamount,created_at,is_filled) values(\'' + str(OrderNo) +'\',\'' + str(UserToken) + '\',' + str(OrderAmount) + ',' + str(timestamp) + ',0)'
@@ -346,7 +332,7 @@ def orders(OrderNo, UserToken, OrderAmount):
 def create_table(sql=''):
     '''
     sql='create table orders(id SERIAL primary key ,UserToken varchar(32) not null,OrderNo varchar(32) not null,OrderAmount decimal not null , created_at bigint not null, is_filled int )'
-    sql = 'create table private_keys(id SERIAL primary key ,user_token varchar(32),private_key varchar(80) not null,public_key varchar(80) not null , starting_balance decimal , starting_time bigint, is_activated int )'
+    sql = 'create table private_keys(id SERIAL primary key ,user_token varchar(40),private_key varchar(128) not null,public_key varchar(128) not null , starting_balance decimal , starting_time timestamp default current_timestamp, is_activated int default 0, has_trusted int default 0 )'
     :param sql:
     :return:
     '''

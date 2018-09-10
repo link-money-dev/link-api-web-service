@@ -5,14 +5,15 @@ import error
 from db import PGManager
 
 def get_balance(LinkAddress, constant):
-    BASE_URL = constant.BASE_URL
+    BASE_URL = constant.HORIZON_BASE_URL
 
     validity = check.check_validity_of_address(LinkAddress)
     if validity == False:
         raise error.APIError('Account is invalid')
     else:
         # inquire api_server and reformat the response
-        _response = json.loads(requests.get(BASE_URL + '/accounts/' + LinkAddress).text)
+        _response=requests.get(BASE_URL + '/accounts/' + LinkAddress).text
+        _response = json.loads(_response)
         id = _response.get('id', 'None')
         if id == 'None':
             raise error.APIError('Account does not exist')
