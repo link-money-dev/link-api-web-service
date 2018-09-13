@@ -158,7 +158,7 @@ def transactions(LinkAddress, limit=50, page=1, asset_code='LINK', asset_issuer=
                 transaction['id']=str(result_of_details[i][1])
                 for tt in result_of_transactions:
                     if result_of_details[i][1]==tt[0]:
-                        transaction['time']=tt[1].strftime("%Y-%m-%d %H:%M:%S")
+                        transaction['time']=(tt[1]+datetime.timedelta(hours=8)).strftime("%Y-%m-%d %H:%M:%S")
                 transactions.append(transaction)
                 if transaction['from']==id:
                     transaction['amount']='-'+transaction['amount']
