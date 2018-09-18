@@ -33,7 +33,7 @@ def generate_keypairs(number, key='', iv='', encrypted=False):
     keypairs=[]
     if key=='' or iv=='':
         key,iv=ENCRYPTION.generate_random_key_pair()
-        print('key=%s\niv=%s' % (key.decode(),iv.decode()))
+        print('key=%s\niv=%s' % (key,iv))
         # f=open('passphrase'+str(time.time()),'w')
         # f.write(str(key)+'\n'+str(iv))
         # f.flush()
