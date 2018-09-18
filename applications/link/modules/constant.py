@@ -61,6 +61,8 @@ class Constant():
             self.DB_CONNECT_ARGS = DB_CONNECT_ARGS_PUBLIC
             self.HORIZON_BASE_URL = HORIZON_BASE_URL_PUBLIC
             self.ASSET_CODE = 'LINK'
+            self.AES_KEY=''
+            self.AES_IV=''
 
         elif server=='stellar':
             self.SEED='SDIUGGIWZ5GHG5RXPDPANBMXEW5B3VDIAY4SSFTWQ42CLBBK2YOU5FYS'

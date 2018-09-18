@@ -84,7 +84,7 @@ def transactions(LinkAddress, limit=50, page=1, asset_code='LINK', asset_issuer=
 
     constant=CONSTANT.Constant('public')
     # BASE_URL=constant.BASE_URL
-    # asset_issuer=constant.ISSUER_ADDRESS
+    asset_issuer=constant.ISSUER_ADDRESS
 
     try:
         id=str(LinkAddress)
@@ -106,69 +106,79 @@ def transactions(LinkAddress, limit=50, page=1, asset_code='LINK', asset_issuer=
         response['Message'] = Message
         return json.dumps(response)
     else:
-
-        result = {
-            'LinkAddress': LinkAddress,
-            'transactions': []
-        }
-
-        # inquire api_server and reformat the response
-        my_psycopg = PGManager(**constant.HORIZON_DB_CONNECT_ARGS)
-        t0=time.time()
-        # sql='select * from history_transactions inner join history_operations on \
-        # history_transactions.id= history_operations.transaction_id where \
-        #                            history_transactions.account=\'' + id +'\' and history_operations.details::text like \'%' + asset_code + '%\'  \
-        #                            and history_operations.details::text like \'%"asset_issuer": "' + asset_issuer + '"%\'  \
-        #                            order by history_transactions.created_at ASC limit ' + str(limit) + ' offset ' + str(limit*(page-1))
-
-        sql0='select id from history_accounts where address=\'' + LinkAddress + '\''
-        sql1='select history_operation_id from history_operation_participants where history_account_id=(%s)' % (sql0,)
-        sql2='select details::text,transaction_id from history_operations as BBB  \
-              where id in (%s) \
-              and details::text like \'%%from%%\' \
-              order by transaction_id DESC limit %d offset %d' % (sql1,limit,limit*(page-1))
-        result_of_details=my_psycopg.select(sql2)
-        '''
-        select id, created_at from history_transactions as AAA where id in 
-        (select transaction_id from history_operations as C where id in (select history_operation_id from history_operation_participants as A 
-        where history_account_id=231))
-        and id in (select transaction_id from history_operations as BBB where id in (select history_operation_id from history_operation_participants where history_account_id=231)
-        and details::text like '%from%')
-        order by created_at DESC
-        '''
-        if len(result_of_details)==0:
+        if LinkAddress==asset_issuer:
+            result = {
+                'LinkAddress': LinkAddress,
+                'transactions': []
+            }
+            result['transactions'] = []
             response['Result'] = result
             response['Code'] = 1
-            response['Message'] = 'Out of index error'
+            response['Message'] = 'Successful'
         else:
-            transaction_ids=[]
-            for detail in result_of_details:
-                transaction_ids.append(str(detail[1]))
-            if len(transaction_ids)==1:
-                tmp0=' id=' + transaction_ids[0]
+
+            result = {
+                'LinkAddress': LinkAddress,
+                'transactions': []
+            }
+
+            # inquire api_server and reformat the response
+            my_psycopg = PGManager(**constant.HORIZON_DB_CONNECT_ARGS)
+            t0=time.time()
+            # sql='select * from history_transactions inner join history_operations on \
+            # history_transactions.id= history_operations.transaction_id where \
+            #                            history_transactions.account=\'' + id +'\' and history_operations.details::text like \'%' + asset_code + '%\'  \
+            #                            and history_operations.details::text like \'%"asset_issuer": "' + asset_issuer + '"%\'  \
+            #                            order by history_transactions.created_at ASC limit ' + str(limit) + ' offset ' + str(limit*(page-1))
+
+            sql0='select id from history_accounts where address=\'' + LinkAddress + '\''
+            sql1='select history_operation_id from history_operation_participants where history_account_id=(%s)' % (sql0,)
+            sql2='select details::text,transaction_id from history_operations as BBB  \
+                  where id in (%s) \
+                  and details::text like \'%%from%%\' \
+                  order by transaction_id DESC limit %d offset %d' % (sql1,limit,limit*(page-1))
+            result_of_details=my_psycopg.select(sql2)
+            '''
+            select id, created_at from history_transactions as AAA where id in 
+            (select transaction_id from history_operations as C where id in (select history_operation_id from history_operation_participants as A 
+            where history_account_id=231))
+            and id in (select transaction_id from history_operations as BBB where id in (select history_operation_id from history_operation_participants where history_account_id=231)
+            and details::text like '%from%')
+            order by created_at DESC
+            '''
+            if len(result_of_details)==0:
+                response['Result'] = result
+                response['Code'] = 1
+                response['Message'] = 'Out of index error'
             else:
-                transaction_ids = ','.join(transaction_ids)
-                tmp0=' id in (' + transaction_ids + ')'
-            sql3='select id, created_at from history_transactions where %s order by id' % (tmp0,)
-            result_of_transactions = my_psycopg.select(sql3)
-            transactions=[]
-            for i in range(len(result_of_details)):
-                detail=json.loads(result_of_details[i][0])
-                transaction=copy.deepcopy(detail)
-                transaction['id']=str(result_of_details[i][1])
-                for tt in result_of_transactions:
-                    if result_of_details[i][1]==tt[0]:
-                        transaction['time']=(tt[1]+datetime.timedelta(hours=8)).strftime("%Y-%m-%d %H:%M:%S")
-                transactions.append(transaction)
-                if transaction['from']==id:
-                    transaction['amount']='-'+transaction['amount']
+                transaction_ids=[]
+                for detail in result_of_details:
+                    transaction_ids.append(str(detail[1]))
+                if len(transaction_ids)==1:
+                    tmp0=' id=' + transaction_ids[0]
                 else:
-                    transaction['amount'] = '+' + transaction['amount']
-            result['transactions']=transactions
-            response['Result']=result
-            response['Code']=1
-            response['Message']='Successful'
-            t=time.time()-t0
+                    transaction_ids = ','.join(transaction_ids)
+                    tmp0=' id in (' + transaction_ids + ')'
+                sql3='select id, created_at from history_transactions where %s order by id' % (tmp0,)
+                result_of_transactions = my_psycopg.select(sql3)
+                transactions=[]
+                for i in range(len(result_of_details)):
+                    detail=json.loads(result_of_details[i][0])
+                    transaction=copy.deepcopy(detail)
+                    transaction['id']=str(result_of_details[i][1])
+                    for tt in result_of_transactions:
+                        if result_of_details[i][1]==tt[0]:
+                            transaction['time']=(tt[1]+datetime.timedelta(hours=8)).strftime("%Y-%m-%d %H:%M:%S")
+                    transactions.append(transaction)
+                    if transaction['from']==id:
+                        transaction['amount']='-'+transaction['amount']
+                    else:
+                        transaction['amount'] = '+' + transaction['amount']
+                result['transactions']=transactions
+                response['Result']=result
+                response['Code']=1
+                response['Message']='Successful'
+                t=time.time()-t0
     return json.dumps(response)
 
 # √√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√
