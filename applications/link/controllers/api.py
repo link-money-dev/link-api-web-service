@@ -51,7 +51,7 @@ def balance(LinkAddress):
         balance=api_methods.get_balance(LinkAddress,constant)
         Code=1
         Message='Successful'
-        Result=Result={'LinkAmount':balance}
+        Result={'LinkAmount':balance}
     except Exception as e:
         Message=e.message
     finally:
@@ -64,7 +64,7 @@ def balance(LinkAddress):
 
 # 2. inquire transactions by id
 @service.run
-def transactions(LinkAddress, limit=50, page=1, asset_code='LINK', asset_issuer=''):
+def transactions(LinkAddress, limit=50, page=1, asset_code='LINK', asset_issuer='GCA3SBI2Y6AYHLAW2GBTS7C5HTSFW6OTZACHOVJGBQ6JENTE3ZXPNNSL'):
     '''
     :param LinkAddress:
     :return: a json object, e.g:
@@ -84,7 +84,7 @@ def transactions(LinkAddress, limit=50, page=1, asset_code='LINK', asset_issuer=
 
     constant=CONSTANT.Constant('public')
     # BASE_URL=constant.BASE_URL
-    asset_issuer=constant.ISSUER_ADDRESS
+    # asset_issuer=constant.ISSUER_ADDRESS
 
     try:
         id=str(LinkAddress)
@@ -136,7 +136,9 @@ def transactions(LinkAddress, limit=50, page=1, asset_code='LINK', asset_issuer=
             sql2='select details::text,transaction_id from history_operations as BBB  \
                   where id in (%s) \
                   and details::text like \'%%from%%\' \
-                  order by transaction_id DESC limit %d offset %d' % (sql1,limit,limit*(page-1))
+                  and details::text like \'%%"asset_code": "%s"%%\'  \
+                  and details::text like \'%%"asset_issuer": "%s"%%\'  \
+                  order by transaction_id DESC limit %d offset %d' % (sql1,asset_code, asset_issuer, limit,limit*(page-1))
             result_of_details=my_psycopg.select(sql2)
             '''
             select id, created_at from history_transactions as AAA where id in 
@@ -252,11 +254,11 @@ def orders(OrderNo, UserToken, OrderAmount):
     except Exception as e:
         Code=0
         Message=e
-    response={
+        response={
         'Code': Code,
         'Message': Message,
         'Result': Result
-    }
+        }
     return json.dumps(response)
 
 
