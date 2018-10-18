@@ -254,7 +254,7 @@ def orders(OrderNo, UserToken, OrderAmount):
     except Exception as e:
         Code=0
         Message=e
-        response={
+    response={
         'Code': Code,
         'Message': Message,
         'Result': Result
