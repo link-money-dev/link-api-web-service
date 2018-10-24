@@ -223,19 +223,25 @@ def orders(OrderNo, UserToken, OrderAmount):
         }
         return json.dumps(response)
     try:
+        t0=time.time()
         constant=CONSTANT.Constant('public')
         my_psycopg = PGManager(**constant.DB_CONNECT_ARGS)
         timestamp=int(time.time())
         sql='insert into orders(orderno, usertoken,orderamount,created_at,is_filled) values(\'' + str(OrderNo) +'\',\'' + str(UserToken) + '\',' + str(OrderAmount) + ',' + str(timestamp) + ',0)'
         my_psycopg.execute(sql)
+        t1=time.time()
+        t10=t1-t0
         # inquire usertoken in table private_keys, if not exists, insert a record
         sql = 'select * from private_keys where user_token=\'' + UserToken + '\''
         rows=my_psycopg.select(sql)
+        t2=time.time()
+        t21=t2-t1
         if len(rows)==0:
             keypair = KEY_GENERATION.generate_keypairs(1, constant.AES_KEY, constant.AES_IV, False)[0]
             sql = 'insert into private_keys(user_token,private_key,public_key,is_activated) values(\'%s\',\'%s\',\'%s\',0)' % (UserToken, keypair[0], keypair[1])
             my_psycopg.execute(sql)
-
+            t3=time.time()
+            t32=t3-t2
             # from wrapper import client as CLIENT
             # client=CLIENT.Client(private_key=constant.SEED,api_server=constant.API_SERVER)
             # client.fund(keypair[1],100)
@@ -253,7 +259,7 @@ def orders(OrderNo, UserToken, OrderAmount):
 
     except Exception as e:
         Code=0
-        Message=e
+        Message=e.args[0]
     response={
         'Code': Code,
         'Message': Message,
@@ -262,75 +268,88 @@ def orders(OrderNo, UserToken, OrderAmount):
     return json.dumps(response)
 
 
-# 4. get all info of an account:
-# def info(address):
-#     response={
-#         'Address':'',
-#         'Message':'',
-#         'Result':''
-#     }
-#     Code=0
-#     Message=None
-#     Result={
-#         'Address':'',
-#         'LinkBalance':0,
-#         'TransactionCount':0,
-#         'TotalSpent':0,
-#         'TotalReceived':0,
-#         'Transactions':[]
-#     }
-#
-#
-#     try:
-#         constant=CONSTANT.Constant('test')
-#         BASE_URL=constant.BASE_URL
-#
-#         # initialization:
-#         asset_issuer = constant.ISSUER_ADDRESS
-#
-#         validity=check.check_validity_of_address(address)
-#         if validity==False:
-#             Code=0
-#             Message='Account is invalid'
-#         else:
-#             # inquire api_server and reformat the response
-#             _response=json.loads(requests.get(BASE_URL+'/accounts/'+address).text)
-#             id=_response.get('id','None')
-#             if id=='None':
-#                 Code=0
-#                 Message='Account does not exist'
-#             else:
-#                 # 1. get the link balance
-#                 Code=1
-#                 Message='Successful'
-#                 LinkBalance=0
-#                 balances=_response.get('balances',[])
-#                 for item in balances:
-#                     item=dict(item)
-#                     if item.get('asset_code','') == 'LINK' and item.get('asset_issuer','') == constant.ISSUER_ADDRESS:
-#                         LinkBalance=float(item['balance'])
-#
-#                 # 2. get the total received and total spent
-#                 # my_psycopg = PsycoPG('horizon', 'cc5985', 'Caichong416', '116.62.226.231', '5432')
-#                 # t0 = time.time()
-#                 # sql = 'select * from history_operations where \
-#                 #        history_operations.details::text like \'%"asset_issuer": "' + asset_issuer + '"%\' and \
-#                 #        history_operations.details::text like \'%"asset_issuer": "' + asset_issuer + '"%\' and \
-#                 #                                    order by history_transactions.created_at ASC limit ' + str(
-#                 #     limit) + ' offset ' + str(limit * (page - 1))
-#                 rows = my_psycopg.select(sql)
-#                 t = time.time() - t0
-#     except Exception as e:
-#         Code=0
-#         Message=e
-#     finally:
-#         response={
-#             'Code':Code,
-#             'Message':Message,
-#             'Result':Result
-#         }
-#     return json.dumps(response)
+# √√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√
+# 3. post transaction details:
+@service.run
+def multi_orders(data):
+    '''
+    url='http://localhost:8000/link/api/call/run/orders'
+    data='{"orderno": "123", "usertoken": "ffff", "orderamount": 1234}'
 
+    :param OrderNo:
+    :param UserToken:
+    :param OrderAmount:
+    :return:
+    '''
+    response={
+        'Code':'',
+        'Message':'',
+        'Result':''
+    }
+    Code=0
+    Message=[]
+    Result=[]
+    data=json.loads(data)
+    for item in data:
+        OrderAmount=item['OrderAmount']
+        UserToken=item['UserToken']
+        OrderNo=item['OrderNo']
+
+        try:
+            OrderAmount=float(OrderAmount)
+            if OrderAmount<0.000001 or OrderAmount>100:
+                Message.append( OrderNo + ': Order amount must be in the range:0.000001-100')
+            else:
+                try:
+                    t0=time.time()
+                    constant = CONSTANT.Constant('public')
+                    my_psycopg = PGManager(**constant.DB_CONNECT_ARGS)
+                    timestamp = int(time.time())
+                    sql = 'insert into orders(orderno, usertoken,orderamount,created_at,is_filled) values(\'' + str(
+                        OrderNo) + '\',\'' + str(UserToken) + '\',' + str(OrderAmount) + ',' + str(timestamp) + ',0)'
+                    my_psycopg.execute(sql)
+                    t1=time.time()
+                    print(t1-t0)
+                    # inquire usertoken in table private_keys, if not exists, insert a record
+                    sql = 'select * from private_keys where user_token=\'' + UserToken + '\''
+                    rows = my_psycopg.select(sql)
+                    t2=time.time()
+                    print(t2-t1)
+                    if len(rows) == 0:
+                        keypair = KEY_GENERATION.generate_keypairs(1, constant.AES_KEY, constant.AES_IV, False)[0]
+                        sql = 'insert into private_keys(user_token,private_key,public_key,is_activated) values(\'%s\',\'%s\',\'%s\',0)' % (
+                        UserToken, keypair[0], keypair[1])
+                        my_psycopg.execute(sql)
+                        t3=time.time()
+                        print(t3-t2)
+                        # from wrapper import client as CLIENT
+                        # client=CLIENT.Client(private_key=constant.SEED,api_server=constant.API_SERVER)
+                        # client.fund(keypair[1],100)
+                    else:
+                        keypair = (rows[0][2], rows[0][3])
+
+                    # private_key=ENCRYPTION.decrypt(keypair[0])
+                    Result.append({
+                        'UserToken': UserToken,
+                        'LinkPrivateKey': keypair[0],
+                        'LinkAddress': keypair[1]
+                    })
+                    Code = 1
+                    Message.append(OrderNo+ ':Successful')
+
+                except Exception as e:
+                    Code = 0
+                    Message.append(OrderNo+':'+ e.args[0])
+
+        except:
+            Message.append(OrderNo + ': Order amount is not a valid number')
+
+    response = {
+        'Code': Code,
+        'Message': Message,
+        'Result': Result
+    }
+    return json.dumps(response)
 
 
 
