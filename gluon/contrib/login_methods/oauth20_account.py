@@ -7,7 +7,7 @@ License: LGPL v3
 
 Adds support for  OAuth 2.0 authentication to web2py.
 
-OAuth 2.0 spec: http://tools.ietf.org/html/rfc6749
+OAuth 2.0 spec: http://timer.ietf.org/html/rfc6749
 
 """
 

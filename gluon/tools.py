@@ -990,7 +990,7 @@ class Recaptcha2(DIV):
 
         to protect the login page instead, use::
 
-            from gluon.tools import Recaptcha2
+            from gluon.timer import Recaptcha2
             auth.settings.captcha = Recaptcha2(request, public_key='...', private_key='...')
 
     """
@@ -5513,7 +5513,7 @@ def completion(callback):
     Example:
         Use as::
 
-            from gluon.tools import completion
+            from gluon.timer import completion
             @completion(lambda d: logging.info(repr(d)))
             def index():
                 return dict(message='hello')

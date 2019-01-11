@@ -6,7 +6,7 @@ with the bitcoin network.
 '''
 
 # This module is based upon base58 snippets found scattered over many bitcoin
-# tools written in python. From what I gather the original source is from a
+# timer written in python. From what I gather the original source is from a
 # forum post by Gavin Andresen, so direct your praise to him.
 # This module adds shiny packaging and support for python3.
 

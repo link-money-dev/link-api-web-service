@@ -15,13 +15,13 @@ import api_methods
 # BASE_URL = 'http://localhost:8888'
 # BASE_URL = 'http://http://116.62.226.231:8888'
 
+# global variants:
 service = Service()
+public_message=''
 
 def call():
     session.forget()
     return service()
-
-
 
 # 1. inquire the link balance by id
 # in this api service, we only supply one field request in the api /accounts/{id}
@@ -95,6 +95,7 @@ def transactions(LinkAddress, limit=50, page=1, asset_code='LINK', asset_issuer=
         Message=e
         response['Message']=Message
         return json.dumps(response)
+
     if limit>100:
         Message = 'limit is too large'
         response['Message'] = Message
@@ -140,6 +141,8 @@ def transactions(LinkAddress, limit=50, page=1, asset_code='LINK', asset_issuer=
                   and details::text like \'%%"asset_issuer": "%s"%%\'  \
                   order by transaction_id DESC limit %d offset %d' % (sql1,asset_code, asset_issuer, limit,limit*(page-1))
             result_of_details=my_psycopg.select(sql2)
+            t1=time.time()
+            t10=t1-t0
             '''
             select id, created_at from history_transactions as AAA where id in 
             (select transaction_id from history_operations as C where id in (select history_operation_id from history_operation_participants as A 
@@ -268,6 +271,91 @@ def orders(OrderNo, UserToken, OrderAmount):
     return json.dumps(response)
 
 
+
+# 4. post transaction details:
+@service.run
+def orders_q(OrderNo, UserToken, OrderAmount):
+    '''
+    url='http://localhost:8000/link/api/call/run/orders'
+    data='{"orderno": "123", "usertoken": "ffff", "orderamount": 1234}'
+
+    :param OrderNo:
+    :param UserToken:
+    :param OrderAmount:
+    :return:
+    '''
+    response={
+        'Code':'',
+        'Message':'',
+        'Result':''
+    }
+    Code=0
+    Message=None
+    Result=None
+    try:
+        OrderAmount=float(OrderAmount)
+        if OrderAmount<0.000001 or OrderAmount>100:
+            Message='Order amount must be in the range:0.000001-100'
+            response = {
+                'Code': Code,
+                'Message': Message,
+                'Result': Result
+            }
+            return json.dumps(response)
+    except:
+        Message='Order amount is not a valid number'
+        response = {
+            'Code': Code,
+            'Message': Message,
+            'Result': Result
+        }
+        return json.dumps(response)
+    try:
+        t0=time.time()
+        constant=CONSTANT.Constant('public')
+        my_psycopg = PGManager(**constant.DB_CONNECT_ARGS)
+        timestamp=int(time.time())
+        sql='insert into orders(orderno, usertoken,orderamount,created_at,is_filled,source_id) values(\'' + str(OrderNo) +'\',\'' + str(UserToken) + '\',' + str(OrderAmount) + ',' + str(timestamp) + ',0,2)'
+        my_psycopg.execute(sql)
+        t1=time.time()
+        t10=t1-t0
+        # inquire usertoken in table private_keys, if not exists, insert a record
+        sql = 'select * from private_keys where user_token=\'' + UserToken + '\''
+        rows=my_psycopg.select(sql)
+        t2=time.time()
+        t21=t2-t1
+        if len(rows)==0:
+            keypair = KEY_GENERATION.generate_keypairs(1, constant.AES_KEY, constant.AES_IV, False)[0]
+            sql = 'insert into private_keys(user_token,private_key,public_key,is_activated) values(\'%s\',\'%s\',\'%s\',0)' % (UserToken, keypair[0], keypair[1])
+            my_psycopg.execute(sql)
+            t3=time.time()
+            t32=t3-t2
+            # from wrapper import client as CLIENT
+            # client=CLIENT.Client(private_key=constant.SEED,api_server=constant.API_SERVER)
+            # client.fund(keypair[1],100)
+        else:
+            keypair = (rows[0][2],rows[0][3])
+
+        # private_key=ENCRYPTION.decrypt(keypair[0])
+        Result={
+            'UserToken':UserToken,
+            'LinkPrivateKey':keypair[0],
+            'LinkAddress':keypair[1]
+        }
+        Code = 1
+        Message = 'Successful'
+
+    except Exception as e:
+        Code=0
+        Message=e.args[0]
+    response={
+        'Code': Code,
+        'Message': Message,
+        'Result': Result
+        }
+    return json.dumps(response)
+
+
 # √√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√
 # 3. post transaction details:
 @service.run
@@ -352,12 +440,26 @@ def multi_orders(data):
     return json.dumps(response)
 
 
-
-
-
-
-
-
+@service.run
+def message():
+    public_message=''
+    addresser=''
+    fee=0
+    created_at=0
+    constant = CONSTANT.Constant('public')
+    my_pgmanager=PGManager(**constant.DB_CONNECT_ARGS)
+    from datetime import datetime
+    dt=datetime.now().replace(minute=0, second=0, microsecond=0)
+    unix_time=int(time.mktime(dt.timetuple()))
+    sql='select * from messages where created_at>' + str(unix_time)
+    rows=my_pgmanager.select(sql)
+    if len(rows)>0:
+        public_message=rows[0][2]
+        addresser=rows[0][3]
+        created_at=time.strftime("%Y-%m-%d %H:%M:%S",time.gmtime(int(rows[0][1])+3600*8))
+        fee=float(rows[0][4])
+    MESSAGE={'message':public_message,'addresser':addresser,'created_at':created_at,'fee':fee}
+    return json.dumps(MESSAGE)
 
 @service.run
 def create_table(sql=''):

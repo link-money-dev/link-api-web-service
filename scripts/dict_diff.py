@@ -12,7 +12,7 @@ Show the differences for two dictionaries.
   -h,  --help          Display this help message.
 
 dict1 and dict2 are two web2py dictionary files to compare. These are the files
-located in the "languages" directory of a web2py app. The tools show the
+located in the "languages" directory of a web2py app. The timer show the
 differences between the two files.
 '''
 

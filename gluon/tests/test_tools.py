@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-    Unit tests for gluon.tools
+    Unit tests for gluon.timer
 """
 import os
 import sys
@@ -1091,7 +1091,7 @@ class TestAuth(unittest.TestCase):
 
 class TestToolsFunctions(unittest.TestCase):
     """
-    Test suite for all the tools.py functions
+    Test suite for all the timer.py functions
     """
     def test_prettydate(self):
         # plain

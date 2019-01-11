@@ -13,12 +13,16 @@ class PGManager():
         return cursor.rowcount
 
     def select(self, sql):
-        self.conn = psycopg2.connect(**self.conn_args)
-        cursor = self.conn.cursor()
-        cursor.execute(sql)
-        rows = cursor.fetchall()
-        self.conn.close()
-        return rows
+        try:
+            self.conn = psycopg2.connect(**self.conn_args)
+            cursor = self.conn.cursor()
+            cursor.execute(sql)
+            rows = cursor.fetchall()
+            self.conn.close()
+        except Exception as e:
+            pass
+        finally:
+            return rows
 
     def execute_many(self,query, sql_sequence):
         self.conn = psycopg2.connect(**self.conn_args)

@@ -3304,7 +3304,7 @@ registerDateHandler(_parse_date_w3dtf)
 
 def _parse_date_rfc822(date):
     """Parse RFC 822 dates and times
-    http://tools.ietf.org/html/rfc822#section-5
+    http://timer.ietf.org/html/rfc822#section-5
 
     There are some formatting differences that are accounted for:
     1. Years may be two or four digits.

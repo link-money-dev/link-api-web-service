@@ -77,7 +77,7 @@ class Constant():
             self.DISTRIBUTOR_ADDRESS = 'GCHZDZXYLZ76XADS7735LK3OJUFZ2TBSXAR23YXKXCXXHUEEVT5C37PY'
             self.BASE_URL = 'http://116.62.226.231:8888'
             self.DB_CONNECT_ARGS=DB_CONNECT_ARGS_TEST
-            self.DB_HORIZON=DB_HORIZON_TEST
+            self.DB_HORIZON=DB_CONNECT_ARGS_HORIZON_TEST
             self.AES_KEY='Xjr;H^P(RepxganS'
             self.AES_IV='7297115918661978'
 

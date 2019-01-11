@@ -52,7 +52,7 @@ class ExtendedLoginForm(object):
         """
         if hasattr(self.alt_login_form, 'get_user'):
             return self.alt_login_form.get_user()
-        return None  # let gluon.tools.Auth.get_or_create_user do the rest
+        return None  # let gluon.timer.Auth.get_or_create_user do the rest
 
     def login_url(self, next):
         """

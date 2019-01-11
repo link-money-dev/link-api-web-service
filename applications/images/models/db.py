@@ -82,7 +82,7 @@ response.form_label_separator = ''
 # - authorization (role based authorization)
 # - services (xml, csv, json, xmlrpc, jsonrpc, amf, rss)
 # - old style crud actions
-# (more options discussed in gluon/tools.py)
+# (more options discussed in gluon/timer.py)
 # -------------------------------------------------------------------------
 
 # host names must be a list of allowed host names (glob syntax allowed)
