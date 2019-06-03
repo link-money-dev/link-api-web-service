@@ -10,23 +10,23 @@ TABLE_NAME='private_keys'
 
 # 3. BASE_URL
 BASE_URL_TEST='http://116.62.226.231:12346'
-BASE_URL_PUBLIC='http://47.75.115.19:12346'
+BASE_URL_PUBLIC='http://47.52.0.154:12346'
 BASE_URL_LOCAL='http://localhost:8000'
 BASE_URL=BASE_URL_TEST
 
 # 4. DB_CONNECT_ARGS
 DB_CONNECT_ARGS_TEST={'database':'lyl_orders', 'user':'cc5985', 'pw':'Caichong416', 'host':'116.62.226.231', 'port':'5432'}
-DB_CONNECT_ARGS_PUBLIC={'database':'lyl_orders', 'user':'cc5985', 'pw':'Caichong416', 'host':'47.75.115.19', 'port':'5432'}
-DB_CONNECT_ARGS_LOCAL={'database':'lyl_orders', 'user':'cc5985', 'pw':'Caichong416', 'host':'47.75.115.19', 'port':'5432'}
+DB_CONNECT_ARGS_PUBLIC={'database':'lyl_orders', 'user':'cc5985', 'pw':'Caichong416', 'host':'47.52.0.154', 'port':'5432'}
+DB_CONNECT_ARGS_LOCAL={'database':'lyl_orders', 'user':'cc5985', 'pw':'Caichong416', 'host':'localhost', 'port':'5432'}
 
 # 5. HORIZON_CONNECT_ARGS
 DB_CONNECT_ARGS_HORIZON_TEST={'database':'horizon', 'user':'cc5985', 'pw':'Caichong416', 'host':'116.62.226.231', 'port':'5432'}
-DB_CONNECT_ARGS_HORIZON_PUBLIC={'database':'horizon', 'user':'cc5985', 'pw':'Caichong416', 'host':'47.75.115.19', 'port':'5432'}
+DB_CONNECT_ARGS_HORIZON_PUBLIC={'database':'horizon', 'user':'cc5985', 'pw':'Caichong416', 'host':'47.52.0.154', 'port':'5432'}
 DB_CONNECT_ARGS_HORIZON_LOCAL={'database':'horizon', 'user':'cc5985', 'pw':'Caichong416', 'host':'116.62.226.231', 'port':'5432'}
 
 # 6. HORIZON_BASE_URL
 HORIZON_BASE_URL_TEST='http://116.62.226.231:8888'
-HORIZON_BASE_URL_PUBLIC='http://47.75.115.19:8888'
+HORIZON_BASE_URL_PUBLIC='http://47.52.0.154:8888'
 HORIZON_BASE_URL_LOCAL='http://localhost:8888'
 HORIZON_BASE_URL=BASE_URL_TEST
 

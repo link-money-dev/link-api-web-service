@@ -441,25 +441,41 @@ def multi_orders(data):
 
 
 @service.run
-def message():
-    public_message=''
-    addresser=''
-    fee=0
-    created_at=0
+def messages(account,destination):
+    # takes in an address, and returns an array of MESSAGES
+    messages=[]
     constant = CONSTANT.Constant('public')
-    my_pgmanager=PGManager(**constant.DB_CONNECT_ARGS)
-    from datetime import datetime
-    dt=datetime.now().replace(minute=0, second=0, microsecond=0)
-    unix_time=int(time.mktime(dt.timetuple()))
-    sql='select * from messages where created_at>' + str(unix_time)
+    my_pgmanager=PGManager(**CONSTANT.DB_CONNECT_ARGS_LOCAL)
+    sql="select * from messages where account='" +account+ "' and destination='" + destination + "' or account='" + destination + "' and destination='" + account + "' and has_read=0 order by created_at desc limit 100"
     rows=my_pgmanager.select(sql)
-    if len(rows)>0:
-        public_message=rows[0][2]
-        addresser=rows[0][3]
-        created_at=time.strftime("%Y-%m-%d %H:%M:%S",time.gmtime(int(rows[0][1])+3600*8))
-        fee=float(rows[0][4])
-    MESSAGE={'message':public_message,'addresser':addresser,'created_at':created_at,'fee':fee}
-    return json.dumps(MESSAGE)
+    for row in rows:
+        messages.append({
+            'th':row[1],
+            'ls': row[2],
+            'a': row[3],
+            'ca': row[4],
+            'mm': row[5],
+            'am': float(row[6]),
+            'dn': row[9]
+        })
+    return json.dumps(messages)
+
+@service.run
+def chatters(account):
+    # takes in an address, and returns an array of all accounts that have (been) talked to the account
+    chatters=[]
+    constant = CONSTANT.Constant('public')
+    my_pgmanager=PGManager(**CONSTANT.DB_CONNECT_ARGS_LOCAL)
+    sql="select distinct destination from messages where account='" +account+ "' and has_read=0"
+    rows=my_pgmanager.select(sql)
+    for row in rows:
+        chatters.append(row[0])
+    sql = "select distinct account from messages where destination='" + account + "' and has_read=0"
+    rows = my_pgmanager.select(sql)
+    for row in rows:
+        chatters.append(row[0])
+    chatters=list(set(chatters))
+    return json.dumps(chatters)
 
 @service.run
 def create_table(sql=''):
